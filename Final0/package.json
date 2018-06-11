@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-responsive": "^1.2.7"
+  },
+  "name": "242final",
+  "version": "1.0.0",
+  "description": "242final",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository" :
+  { "type" : "svn"
+  , "url" : "https://subversion.ews.illinois.edu/svn/sp17-cs242/tyamamo2/Final0/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

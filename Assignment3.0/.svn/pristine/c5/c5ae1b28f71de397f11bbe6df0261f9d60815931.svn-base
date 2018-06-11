@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Taccio Yamamoto Projects</h1>
+    <h2>Projects:</h2>
+    <ul>
+        {% for project in assignments %}
+            <li><a href="directory/{{project}}">{{project}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

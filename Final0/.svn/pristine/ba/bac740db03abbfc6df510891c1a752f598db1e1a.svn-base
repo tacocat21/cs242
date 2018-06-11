@@ -1,0 +1,130 @@
+from flask import Flask, request, abort, render_template, jsonify
+from src.api_server.api_handler import APIServerHandler
+import os
+
+template_dir = os.path.abspath('../web_frontend/')
+static_dir = os.path.abspath('../web_frontend/static/')
+app = Flask(__name__, static_folder=static_dir, template_folder=template_dir)
+
+api_handler = APIServerHandler()
+
+
+@app.route('/')
+def get_login_page():
+    return render_template('templates/login.html')
+
+@app.route('/api/login', methods=['POST'])
+def attempt_login():
+    if request.method == 'POST':
+        login_result = api_handler.login(email=request.json['email'], password=request.json['password'])
+        if login_result is not None:
+            return jsonify(login_result)
+        abort(401)
+
+
+@app.route('/api/student/<string:student_id>', methods=['POST', 'GET'])
+def process_specific_student(student_id):
+    # Get student information
+    if request.method == 'GET':
+        filter_dict = None
+        if 'filter_dict' in request.form:
+            filter_dict = request.form['filter_dict']
+        result = api_handler.get_student_by_id(str(student_id),
+                                               filter_dict=filter_dict)
+        if result is not None:
+            return result, 200
+        abort(404)
+
+
+@app.route('/api/student', methods=['POST', 'GET'])
+def process_students():
+    # create new student
+    if request.method == 'POST':
+        incoming_data = request.json
+        result = api_handler.create_student(name=incoming_data['name'],
+                                            password=incoming_data['password'],
+                                            year=incoming_data['year'],
+                                            email=incoming_data['email'],
+                                            school_id=incoming_data['school_id'])
+        return jsonify(result), 201
+    # get student list
+    elif request.method == 'GET':
+        pass
+
+
+@app.route('/api/teacher/<string:teacher_id>')
+def process_specific_teacher(teacher_id):
+    # Get teacher with _id:teacher_id
+    if request.method == 'GET':
+        filter_dict = None
+        if 'filter_dict' in request.form:
+            filter_dict = request.form['filter_dict']
+        result = api_handler.get_teacher_by_id(teacher_id=str(teacher_id),
+                                               filter_dict=filter_dict)
+        if result is not None:
+            return result, 200
+        abort(404)
+
+
+@app.route('/api/teacher', methods=['POST'])
+def process_teacher():
+    # create teacher
+    if request.method == 'POST':
+        return jsonify(api_handler.create_teacher(name=request.json['name'],
+                                                  password=request.json['password'],
+                                                  email=request.json['email'],
+                                                  school_id=request.json['school_id'])), 201
+
+
+@app.route('/api/course', methods=['GET', 'POST'])
+def handle_courses():
+    # create course
+    if request.method == 'POST':
+        return jsonify(api_handler.create_course(course_name=request.form['course_name'],
+                                                 course_code=request.form['course_code'],
+                                                 teacher_id=request.form['teacher_id'],
+                                                 teacher_school_id=request.form['teacher_school_id'],
+                                                 teacher_name=request.form['teacher_name'])), 201
+    # Get a list of all courses
+    elif request.method == 'GET':
+        filter_dict = None
+        if 'filter_dict' in request.form:
+            filter_dict = request.form['filter_dict']
+        result = api_handler.get_all_courses(filter_dict=filter_dict)
+        if result is not None:
+            return result, 302
+        abort(404)
+
+
+@app.route('/api/course/<string:course_id>')
+def process_specific_course(course_id):
+    # return info about specific course
+    if request.method == 'GET':
+        filter_dict = None
+        if 'filter_dict' in request.form:
+            filter_dict = request.form['filter_dict']
+        result = api_handler.get_course_by_id(course_id=course_id,
+                                              filter_dict=filter_dict)
+        if result is not None:
+            return result, 200
+        abort(404)
+
+
+@app.route('/api/course/student', methods=['GET', 'POST'])
+def handle_student_course_request():
+    # Add student to course
+    if request.method == 'POST':
+        api_handler.add_student_to_class()
+    # Get list of students in class
+    elif request.method == 'GET':
+        result = api_handler.get_course_by_id(course_id=request.form['course_id'])
+        if result is not None:
+            return result, 200
+        abort(404)
+
+@app.route('/api/session/', methods=['GET', 'POST'])
+def handle_session():
+    pass
+
+if __name__ == "__main__":
+    app.run()

@@ -1,0 +1,8 @@
+.message-text{
+    color:black;
+}
+
+.text-input{
+    color:black;
+    line-height: 1.2em;
+}

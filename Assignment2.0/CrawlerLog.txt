@@ -1,0 +1,483 @@
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Faye_Dunaway
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Chinatown_(1974_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jack_Nicholson
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Hillerman
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Perry_Lopez
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mommie_Dearest_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Burt_Young
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Huston
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Diana_Scarwid
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mara_Hobel
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Last_Picture_Show
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rutanya_Alda
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Steve_Forrest_(actor)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Timothy_Bottoms
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jeff_Bridges
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Cybill_Shepherd
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Ellen_Burstyn
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Ben_Johnson_(actor)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Cloris_Leachman
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Randy_Quaid
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Cleavon_Little
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Gene_Wilder
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Harvey_Korman
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Slim_Pickens
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Madeline_Kahn
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/James_Olson_(actor)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Producers_(1968_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Zero_Mostel
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kenneth_Mars
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dick_Shawn
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Ronny_Cox
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Bibi_Besch
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Weller
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nancy_Allen_(actress)
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dan_O%27Herlihy
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kurtwood_Smith
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Miguel_Ferrer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Blue_Sea_(1999_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Saffron_Burrows
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Jane
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/LL_Cool_J
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jacqueline_McKenzie
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Rapaport
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Stellan_Skarsg%C3%A5rd
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Samuel_L._Jackson
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/In_the_Name_of_the_Father_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Daniel_Day-Lewis
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Emma_Thompson
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Pete_Postlethwaite
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Wing_Commander_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Freddie_Prinze,_Jr.
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Matthew_Lillard
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Tch%C3%A9ky_Karyo
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/J%C3%BCrgen_Prochnow
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/David_Suchet
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Alien_3
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sigourney_Weaver
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Charles_Dance
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Charles_S._Dutton
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Lance_Henriksen
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Romeo_%2B_Juliet
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Leonardo_DiCaprio
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Claire_Danes
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Lost_World:_Jurassic_Park
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Brian_Dennehy
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Leguizamo
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Paul_Sorvino
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Diane_Venora
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jeff_Goldblum
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Julianne_Moore
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Arliss_Howard
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rudy_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sean_Astin
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Ned_Beatty
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Lili_Taylor
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Robert_Prosky
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/U_Turn_(1997_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sean_Penn
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Rainmaker_(1997_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jennifer_Lopez
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(1998_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nick_Nolte
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Powers_Boothe
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Joaquin_Phoenix
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Wolfen_(film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Billy_Bob_Thornton
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jon_Voight
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Matt_Damon
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/F/X
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Death_Wish_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mary_Kay_Place
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mickey_Rourke
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Danny_DeVito
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Liam_Neeson
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Encino_Man
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Mariel_Hemingway
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Ronny_Cox
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Bibi_Besch
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Weller
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nancy_Allen_(actress)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dan_O%27Herlihy
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kurtwood_Smith
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Miguel_Ferrer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Total_Recall_(1990_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Arnold_Schwarzenegger
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rachel_Ticotin
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sharon_Stone
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Ironside
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Blue_Sea_(1999_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Saffron_Burrows
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Jane
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/LL_Cool_J
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Ronny_Cox
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Bibi_Besch
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Weller
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nancy_Allen_(actress)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dan_O%27Herlihy
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kurtwood_Smith
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Miguel_Ferrer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Total_Recall_(1990_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Arnold_Schwarzenegger
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rachel_Ticotin
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sharon_Stone
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Ironside
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Blue_Sea_(1999_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Saffron_Burrows
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Jane
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/LL_Cool_J
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jacqueline_McKenzie
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Rapaport
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Stellan_Skarsg%C3%A5rd
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Samuel_L._Jackson
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Imagine_That_(film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Eddie_Murphy
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Haden_Church
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nicole_Ari_Parker
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Martin_Sheen
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Carrie_(1976_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sissy_Spacek
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Travolta
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Piper_Laurie
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dressed_to_Kill_(1980_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Caine
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Angie_Dickinson
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Keith_Gordon
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Poltergeist_III
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Tom_Skerritt
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop_2
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Heather_O%27Rourke
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Zelda_Rubinstein
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop_3
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Tom_Noonan
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Belinda_Bauer_(actress)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Gabriel_Damon
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Out_of_Sight
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Robert_John_Burke
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rip_Torn
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Castle
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jill_Hennessy
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/C._C._H._Pounder
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mako_Iwamatsu
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Robert_DoQui
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/George_Clooney
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jennifer_Lopez
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Ving_Rhames
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Don_Cheadle
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dennis_Farina
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Albert_Brooks
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/100_Rifles
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Raquel_Welch
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Burt_Reynolds
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Tamarind_Seed
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Julie_Andrews
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Omar_Sharif
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Halloween_III:_Season_of_the_Witch
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Staying_Alive_(1983_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/True_Believer_(1989_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dead_Poets_Society
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Oscar_(1991_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Star_Trek_VI:_The_Undiscovered_Country
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/A_Time_to_Kill_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Broken_Arrow_(1996_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Impact_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/In_the_Name_of_the_Father_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Wing_Commander_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nemesis_(1992_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Crow:_City_of_Angels
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Face/Off
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Boogie_Nights
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Thin_Red_Line_(1998_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dreamcatcher_(2003_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Punisher_(2004_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Mist_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Scott_Pilgrim_vs._the_World
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Standoff_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Before_I_Wake_(2016_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Toys_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Halloween_H20:_20_Years_Later
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Any_Given_Sunday
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rollerball_(2002_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/S.W.A.T._(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Grudge_Match_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Romper_Stomper
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/True_Romance
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Basketball_Diaries_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kiss_of_Death_(1995_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Beautiful_Girls_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Pallbearer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Heat_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sully_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Hunt_for_Red_October_(film)
+INFO:root:Crawler finished running successfully. Acquired 50 actors  and 50 movies.
+INFO:root:Initializing crawler. initial website is https://en.wikipedia.org/wiki/Ronny_Cox
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Bibi_Besch
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Weller
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nancy_Allen_(actress)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dan_O%27Herlihy
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kurtwood_Smith
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Miguel_Ferrer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Total_Recall_(1990_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Arnold_Schwarzenegger
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rachel_Ticotin
+DEBUG:root:Website  is neither a movie page nor an actor page
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sharon_Stone
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Ironside
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Blue_Sea_(1999_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Saffron_Burrows
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Jane
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/LL_Cool_J
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jacqueline_McKenzie
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Rapaport
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Stellan_Skarsg%C3%A5rd
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Samuel_L._Jackson
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Imagine_That_(film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Eddie_Murphy
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Thomas_Haden_Church
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nicole_Ari_Parker
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Martin_Sheen
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Carrie_(1976_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sissy_Spacek
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Travolta
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Piper_Laurie
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dressed_to_Kill_(1980_film)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Michael_Caine
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Angie_Dickinson
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Keith_Gordon
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Poltergeist_III
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Tom_Skerritt
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop_2
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Heather_O%27Rourke
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Zelda_Rubinstein
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/RoboCop_3
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Tom_Noonan
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Belinda_Bauer_(actress)
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Gabriel_Damon
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Out_of_Sight
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Robert_John_Burke
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rip_Torn
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/John_Castle
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jill_Hennessy
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/C._C._H._Pounder
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Mako_Iwamatsu
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Robert_DoQui
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/George_Clooney
+WARNING:root:Unable to obtain actor filmography because filmography section is not found
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Jennifer_Lopez
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Ving_Rhames
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Don_Cheadle
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dennis_Farina
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Albert_Brooks
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/100_Rifles
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Raquel_Welch
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Burt_Reynolds
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Tamarind_Seed
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Julie_Andrews
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Omar_Sharif
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Halloween_III:_Season_of_the_Witch
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Staying_Alive_(1983_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/True_Believer_(1989_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dead_Poets_Society
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Oscar_(1991_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Star_Trek_VI:_The_Undiscovered_Country
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/A_Time_to_Kill_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Broken_Arrow_(1996_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Deep_Impact_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/In_the_Name_of_the_Father_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Wing_Commander_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Nemesis_(1992_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Crow:_City_of_Angels
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Face/Off
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Boogie_Nights
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Thin_Red_Line_(1998_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Dreamcatcher_(2003_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Punisher_(2004_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Mist_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Scott_Pilgrim_vs._the_World
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Standoff_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Before_I_Wake_(2016_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Toys_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Halloween_H20:_20_Years_Later
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Any_Given_Sunday
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Rollerball_(2002_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/S.W.A.T._(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Grudge_Match_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Romper_Stomper
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/True_Romance
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Basketball_Diaries_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Kiss_of_Death_(1995_film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Beautiful_Girls_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Pallbearer
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Heat_(film)
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/Sully_(film)
+DEBUG:root:Website  is neither a movie page nor an actor page
+INFO:root:Successfully able to acquire information from https://en.wikipedia.org/wiki/The_Hunt_for_Red_October_(film)
+INFO:root:Crawler finished running successfully. Acquired 50 actors  and 50 movies.

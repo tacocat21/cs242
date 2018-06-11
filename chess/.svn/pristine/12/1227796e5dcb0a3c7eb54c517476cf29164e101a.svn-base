@@ -1,0 +1,7 @@
+package Piece.Implementation;
+
+/**
+ * Created by taccio on 2/5/17.
+ */
+public class Knight {
+}

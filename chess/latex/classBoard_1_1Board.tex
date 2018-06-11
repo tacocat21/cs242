@@ -1,0 +1,682 @@
+\hypertarget{classBoard_1_1Board}{\section{Board.\-Board Class Reference}
+\label{classBoard_1_1Board}\index{Board.\-Board@{Board.\-Board}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}{Board} (\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]} pieces, int\mbox{[}$\,$\mbox{]} limit)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}{is\-Out\-Of\-Bound} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)
+\item 
+boolean \hyperlink{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}{is\-Out\-Of\-Bound} (int x, int y)
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}{get\-Piece} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a98f33996099296400eea798e545174b3}{get\-Piece} (int x, int y)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}{is\-Empty} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+void \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece} (\hyperlink{classPiece_1_1Piece}{Piece} target\-Piece)  throws Exception 
+\item 
+void \hyperlink{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}{set\-Piece} (\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]} target\-Piece)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}{remove\-Piece} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}{check} (\hyperlink{classUtil_1_1Position}{Position} king\-Position, Array\-List$<$ \hyperlink{classPiece_1_1Piece}{Piece} $>$ enemy\-Pieces)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}{check\-Mate} (\hyperlink{classPiece_1_1Implementation_1_1King}{King} king, Array\-List$<$ \hyperlink{classPiece_1_1Piece}{Piece} $>$ enemy\-Pieces)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}{move} (\hyperlink{classPiece_1_1Piece}{Piece} current\-Piece, \hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}{get\-Board} ()
+\item 
+int \hyperlink{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}{get\-Num\-Columns} ()
+\item 
+int \hyperlink{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}{get\-Num\-Rows} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}{get\-Limit} ()
+\item 
+\hyperlink{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}{Board} (\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]} pieces, int\mbox{[}$\,$\mbox{]} limit)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}{is\-Out\-Of\-Bound} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)
+\item 
+boolean \hyperlink{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}{is\-Out\-Of\-Bound} (int x, int y)
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}{get\-Piece} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a98f33996099296400eea798e545174b3}{get\-Piece} (int x, int y)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}{is\-Empty} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+void \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece} (\hyperlink{classPiece_1_1Piece}{Piece} target\-Piece)  throws Exception 
+\item 
+void \hyperlink{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}{set\-Piece} (\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]} target\-Piece)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}{remove\-Piece} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}{check} (\hyperlink{classUtil_1_1Position}{Position} king\-Position, Array\-List$<$ \hyperlink{classPiece_1_1Piece}{Piece} $>$ enemy\-Pieces)  throws Exception 
+\item 
+boolean \hyperlink{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}{check\-Mate} (\hyperlink{classPiece_1_1Implementation_1_1King}{King} king, Array\-List$<$ \hyperlink{classPiece_1_1Piece}{Piece} $>$ enemy\-Pieces)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece} \hyperlink{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}{move} (\hyperlink{classPiece_1_1Piece}{Piece} current\-Piece, \hyperlink{classUtil_1_1Position}{Position} target\-Position)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Piece}{Piece}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}{get\-Board} ()
+\item 
+int \hyperlink{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}{get\-Num\-Columns} ()
+\item 
+int \hyperlink{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}{get\-Num\-Rows} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}{get\-Limit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that represents the chess board
+
+\begin{DoxyAuthor}{Author}
+Taccio Yamamoto 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}{\index{Board\-::\-Board@{Board\-::\-Board}!Board@{Board}}
+\index{Board@{Board}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{Board}]{\setlength{\rightskip}{0pt plus 5cm}Board.\-Board.\-Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}\mbox{[}$\,$\mbox{]}}]{pieces, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{limit}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}
+\hyperlink{classBoard_1_1Board}{Board} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em pieces} & -\/ list of pieces to add to the board \\
+\hline
+{\em limit} & -\/ limit of the board dimensions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws Exception from the \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece()} function \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}{\index{Board\-::\-Board@{Board\-::\-Board}!Board@{Board}}
+\index{Board@{Board}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{Board}]{\setlength{\rightskip}{0pt plus 5cm}Board.\-Board.\-Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}\mbox{[}$\,$\mbox{]}}]{pieces, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{limit}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a652faf97b9270325dfec42e9878dde03}
+\hyperlink{classBoard_1_1Board}{Board} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em pieces} & -\/ list of pieces to add to the board \\
+\hline
+{\em limit} & -\/ limit of the board dimensions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws Exception from the \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece()} function \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}{\index{Board\-::\-Board@{Board\-::\-Board}!check@{check}}
+\index{check@{check}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-check (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{king\-Position, }
+\item[{Array\-List$<$ {\bf Piece} $>$}]{enemy\-Pieces}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}
+Checks if the king piece is in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em king\-Position} & -\/ king's position \\
+\hline
+{\em enemy\-Pieces} & -\/ An array list of enemy pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the king is in check 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}{\index{Board\-::\-Board@{Board\-::\-Board}!check@{check}}
+\index{check@{check}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-check (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{king\-Position, }
+\item[{Array\-List$<$ {\bf Piece} $>$}]{enemy\-Pieces}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_abf4d033c7753e614381a9276ee29fc62}
+Checks if the king piece is in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em king\-Position} & -\/ king's position \\
+\hline
+{\em enemy\-Pieces} & -\/ An array list of enemy pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the king is in check 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}{\index{Board\-::\-Board@{Board\-::\-Board}!check\-Mate@{check\-Mate}}
+\index{check\-Mate@{check\-Mate}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{check\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-check\-Mate (
+\begin{DoxyParamCaption}
+\item[{{\bf King}}]{king, }
+\item[{Array\-List$<$ {\bf Piece} $>$}]{enemy\-Pieces}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}
+Checks if the king is in checkmate
+
+
+\begin{DoxyParams}{Parameters}
+{\em king} & -\/ king piece \\
+\hline
+{\em enemy\-Pieces} & -\/ An array list of enemy pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a checkmate against the king 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}{\index{Board\-::\-Board@{Board\-::\-Board}!check\-Mate@{check\-Mate}}
+\index{check\-Mate@{check\-Mate}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{check\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-check\-Mate (
+\begin{DoxyParamCaption}
+\item[{{\bf King}}]{king, }
+\item[{Array\-List$<$ {\bf Piece} $>$}]{enemy\-Pieces}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a713aad08cb0666bf632cf2cf3447124f}
+Checks if the king is in checkmate
+
+
+\begin{DoxyParams}{Parameters}
+{\em king} & -\/ king piece \\
+\hline
+{\em enemy\-Pieces} & -\/ An array list of enemy pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a checkmate against the king 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Board@{get\-Board}}
+\index{get\-Board@{get\-Board}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Board}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Board.\-Board.\-get\-Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}
+Get board array
+
+\begin{DoxyReturn}{Returns}
+the board object 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Board@{get\-Board}}
+\index{get\-Board@{get\-Board}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Board}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Board.\-Board.\-get\-Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_ac153f5c0e83be18cec93e33078706076}
+Get board array
+
+\begin{DoxyReturn}{Returns}
+the board object 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Limit@{get\-Limit}}
+\index{get\-Limit@{get\-Limit}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Board.\-Board.\-get\-Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}
+Gets the limit array of the board
+
+\begin{DoxyReturn}{Returns}
+the limit array representing the dimensions of the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Limit@{get\-Limit}}
+\index{get\-Limit@{get\-Limit}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Board.\-Board.\-get\-Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a491bcebbe369da000b951e706910f5bd}
+Gets the limit array of the board
+
+\begin{DoxyReturn}{Returns}
+the limit array representing the dimensions of the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Num\-Columns@{get\-Num\-Columns}}
+\index{get\-Num\-Columns@{get\-Num\-Columns}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Num\-Columns}]{\setlength{\rightskip}{0pt plus 5cm}int Board.\-Board.\-get\-Num\-Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}
+Gets the number of columns of the board
+
+\begin{DoxyReturn}{Returns}
+the number of columns on the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Num\-Columns@{get\-Num\-Columns}}
+\index{get\-Num\-Columns@{get\-Num\-Columns}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Num\-Columns}]{\setlength{\rightskip}{0pt plus 5cm}int Board.\-Board.\-get\-Num\-Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a98f46a8fba5082f562248f650f26c2ed}
+Gets the number of columns of the board
+
+\begin{DoxyReturn}{Returns}
+the number of columns on the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Num\-Rows@{get\-Num\-Rows}}
+\index{get\-Num\-Rows@{get\-Num\-Rows}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Num\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Board.\-Board.\-get\-Num\-Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}
+Gets the number of columns of the board
+
+\begin{DoxyReturn}{Returns}
+the number of rows on the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Num\-Rows@{get\-Num\-Rows}}
+\index{get\-Num\-Rows@{get\-Num\-Rows}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Num\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Board.\-Board.\-get\-Num\-Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a25c2073838801fb0e52bd3916d7a9024}
+Gets the number of columns of the board
+
+\begin{DoxyReturn}{Returns}
+the number of rows on the board 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Piece@{get\-Piece}}
+\index{get\-Piece@{get\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-get\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}
+Returns the piece at the target\-Position
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ target\-Position to get the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the piece at the target\-Position or null if there are no pieces at the position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exception if the target\-Position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Piece@{get\-Piece}}
+\index{get\-Piece@{get\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-get\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a86de1febbcfdc2ea7ccaef4dd00d1d9d}
+Returns the piece at the target\-Position
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ target\-Position to get the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the piece at the target\-Position or null if there are no pieces at the position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exception if the target\-Position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a98f33996099296400eea798e545174b3}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Piece@{get\-Piece}}
+\index{get\-Piece@{get\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-get\-Piece (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a98f33996099296400eea798e545174b3}
+Returns the piece at the target\-Position
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ target row \\
+\hline
+{\em y} & -\/ target col \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the piece at the target\-Position or null if there are no pieces at the position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exceptino if the requested position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a98f33996099296400eea798e545174b3}{\index{Board\-::\-Board@{Board\-::\-Board}!get\-Piece@{get\-Piece}}
+\index{get\-Piece@{get\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{get\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-get\-Piece (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a98f33996099296400eea798e545174b3}
+Returns the piece at the target\-Position
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ target row \\
+\hline
+{\em y} & -\/ target col \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the piece at the target\-Position or null if there are no pieces at the position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exceptino if the requested position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}
+Checks if the target position is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ position to check if the piece is on the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there are no pieces at target Position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & -\/ throws exception if target\-Position is outside the board \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a0cbc00ef5292278d7e1ae004762d3e11}
+Checks if the target position is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ position to check if the piece is on the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there are no pieces at target Position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & -\/ throws exception if target\-Position is outside the board \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}}
+\index{is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Out\-Of\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Out\-Of\-Bound (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}
+Checks if the target\-Position is out of bounds
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ position object to check out of bounds condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the target\-Position is out of bounds 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}}
+\index{is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Out\-Of\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Out\-Of\-Bound (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aca3851cdb777a92a5cf7d2606f08a0b2}
+Checks if the target\-Position is out of bounds
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & -\/ position object to check out of bounds condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the target\-Position is out of bounds 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}}
+\index{is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Out\-Of\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Out\-Of\-Bound (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}
+Checks if the target\-Position is out of bounds
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ x value to check \\
+\hline
+{\em y} & -\/ y value to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the target\-Position is out of bounds 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}{\index{Board\-::\-Board@{Board\-::\-Board}!is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}}
+\index{is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{is\-Out\-Of\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}boolean Board.\-Board.\-is\-Out\-Of\-Bound (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aa3a97aabcffb32d0c8d93770002af58a}
+Checks if the target\-Position is out of bounds
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ x value to check \\
+\hline
+{\em y} & -\/ y value to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the target\-Position is out of bounds 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}{\index{Board\-::\-Board@{Board\-::\-Board}!move@{move}}
+\index{move@{move}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-move (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}}]{current\-Piece, }
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}
+moves the current piece to the target position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\-Piece} & -\/ piece to move to target position \\
+\hline
+{\em target\-Position} & -\/ position to move the current\-Piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the piece at target\-Position. null if no piece is located at target Position 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}{\index{Board\-::\-Board@{Board\-::\-Board}!move@{move}}
+\index{move@{move}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-move (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}}]{current\-Piece, }
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a0950d74ea65b9e01a5a2169815e486d9}
+moves the current piece to the target position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\-Piece} & -\/ piece to move to target position \\
+\hline
+{\em target\-Position} & -\/ position to move the current\-Piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the piece at target\-Position. null if no piece is located at target Position 
+\end{DoxyReturn}
+\hypertarget{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}{\index{Board\-::\-Board@{Board\-::\-Board}!remove\-Piece@{remove\-Piece}}
+\index{remove\-Piece@{remove\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{remove\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-remove\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}
+Removes piece on the board at target position
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & target position to remove the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the piece object at target\-Position or null if no pieces were there 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exception if target\-Position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}{\index{Board\-::\-Board@{Board\-::\-Board}!remove\-Piece@{remove\-Piece}}
+\index{remove\-Piece@{remove\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{remove\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece} Board.\-Board.\-remove\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_a31788b52f6230f37b2c68e274c62f1e7}
+Removes piece on the board at target position
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Position} & target position to remove the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the piece object at target\-Position or null if no pieces were there 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exception if target\-Position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{\index{Board\-::\-Board@{Board\-::\-Board}!set\-Piece@{set\-Piece}}
+\index{set\-Piece@{set\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{set\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}void Board.\-Board.\-set\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}}]{target\-Piece}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}
+Sets the target\-Piece on the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Piece} & -\/ piece to add to the board \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the Piece has a position out of bounds or the piece is setting on a non-\/empty location \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{\index{Board\-::\-Board@{Board\-::\-Board}!set\-Piece@{set\-Piece}}
+\index{set\-Piece@{set\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{set\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}void Board.\-Board.\-set\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}}]{target\-Piece}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}
+Sets the target\-Piece on the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Piece} & -\/ piece to add to the board \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the Piece has a position out of bounds or the piece is setting on a non-\/empty location \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}{\index{Board\-::\-Board@{Board\-::\-Board}!set\-Piece@{set\-Piece}}
+\index{set\-Piece@{set\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{set\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}void Board.\-Board.\-set\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}\mbox{[}$\,$\mbox{]}}]{target\-Piece}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}
+Sets multiple pieces on the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Piece} & -\/ array of Piece objects to add to the board \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & same exception as the \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece(\-Piece)} function \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}{\index{Board\-::\-Board@{Board\-::\-Board}!set\-Piece@{set\-Piece}}
+\index{set\-Piece@{set\-Piece}!Board::Board@{Board\-::\-Board}}
+\subsubsection[{set\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}void Board.\-Board.\-set\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf Piece}\mbox{[}$\,$\mbox{]}}]{target\-Piece}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoard_1_1Board_ad7f93562756cf2704b53d660d8c2ef12}
+Sets multiple pieces on the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\-Piece} & -\/ array of Piece objects to add to the board \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & same exception as the \hyperlink{classBoard_1_1Board_aec610c37f3e800806daa464a45b48762}{set\-Piece(\-Piece)} function \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Assignment1.\-0/src/\-Board/Board.\-java\item 
+src/\-Board/Board.\-java\end{DoxyCompactItemize}

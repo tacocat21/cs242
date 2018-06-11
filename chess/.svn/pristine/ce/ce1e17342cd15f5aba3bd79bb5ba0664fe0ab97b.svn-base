@@ -1,0 +1,111 @@
+\hypertarget{classBoard_1_1BoardTest}{\section{Board.\-Board\-Test Class Reference}
+\label{classBoard_1_1BoardTest}\index{Board.\-Board\-Test@{Board.\-Board\-Test}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBoard_1_1BoardTest_adae540eb02e71e280456c4f169830e30}{void {\bfseries setup} ()  throws Exception}\label{classBoard_1_1BoardTest_adae540eb02e71e280456c4f169830e30}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a5712c82132f01dae3564fcfe5c5a8dbb}{void {\bfseries is\-Out\-Of\-Bound} ()  throws Exception }\label{classBoard_1_1BoardTest_a5712c82132f01dae3564fcfe5c5a8dbb}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a418fc471dc9448638e352312f07ecac9}{void {\bfseries get\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_a418fc471dc9448638e352312f07ecac9}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ad20a5c811d5a040361413b00ab1086f0}{void {\bfseries is\-Empty} ()  throws Exception }\label{classBoard_1_1BoardTest_ad20a5c811d5a040361413b00ab1086f0}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a812e290f6bb95a4d950ed5445d556f40}{void {\bfseries set\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_a812e290f6bb95a4d950ed5445d556f40}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a672fcbc8e906eaa083cd9c584bb08adf}{void {\bfseries test\-Set\-Piece\-Exception} ()  throws Exception}\label{classBoard_1_1BoardTest_a672fcbc8e906eaa083cd9c584bb08adf}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_af9c5bad34b8cfa72a4131ca92c06875b}{void {\bfseries remove\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_af9c5bad34b8cfa72a4131ca92c06875b}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a653f31e72b3b5aa6d775f3b7234a8207}{void {\bfseries check} ()  throws Exception }\label{classBoard_1_1BoardTest_a653f31e72b3b5aa6d775f3b7234a8207}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ace6072d8d0e7144454113e62b9ba6703}{void {\bfseries check\-Mate} ()  throws Exception }\label{classBoard_1_1BoardTest_ace6072d8d0e7144454113e62b9ba6703}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a6cca33a12e7caf99a18cd4f3846037c9}{void {\bfseries check\-Mate2} ()  throws Exception }\label{classBoard_1_1BoardTest_a6cca33a12e7caf99a18cd4f3846037c9}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a4e1243b5604936e1c651f851850644fd}{void {\bfseries test\-Move} ()  throws Exception }\label{classBoard_1_1BoardTest_a4e1243b5604936e1c651f851850644fd}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ad323c55fdd4ced38a9feb3c33905022c}{void {\bfseries test\-Move\-Exception} ()  throws Exception}\label{classBoard_1_1BoardTest_ad323c55fdd4ced38a9feb3c33905022c}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a4353e2b96f89dc3ddd8cf1a0967f2b73}{void {\bfseries get\-Board} ()  throws Exception }\label{classBoard_1_1BoardTest_a4353e2b96f89dc3ddd8cf1a0967f2b73}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a16e4087fb6a6d9d9e94f548c51c29aec}{void {\bfseries get\-Num\-Columns} ()  throws Exception }\label{classBoard_1_1BoardTest_a16e4087fb6a6d9d9e94f548c51c29aec}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ab3b68e75b17a6392366cee7d3e8c25cf}{void {\bfseries get\-Num\-Rows} ()  throws Exception }\label{classBoard_1_1BoardTest_ab3b68e75b17a6392366cee7d3e8c25cf}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a442991de8ee38de866f914259adbfed9}{void {\bfseries get\-Limit} ()  throws Exception }\label{classBoard_1_1BoardTest_a442991de8ee38de866f914259adbfed9}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_adae540eb02e71e280456c4f169830e30}{void {\bfseries setup} ()  throws Exception }\label{classBoard_1_1BoardTest_adae540eb02e71e280456c4f169830e30}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a5712c82132f01dae3564fcfe5c5a8dbb}{void {\bfseries is\-Out\-Of\-Bound} ()  throws Exception }\label{classBoard_1_1BoardTest_a5712c82132f01dae3564fcfe5c5a8dbb}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a418fc471dc9448638e352312f07ecac9}{void {\bfseries get\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_a418fc471dc9448638e352312f07ecac9}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ad20a5c811d5a040361413b00ab1086f0}{void {\bfseries is\-Empty} ()  throws Exception }\label{classBoard_1_1BoardTest_ad20a5c811d5a040361413b00ab1086f0}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a812e290f6bb95a4d950ed5445d556f40}{void {\bfseries set\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_a812e290f6bb95a4d950ed5445d556f40}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a672fcbc8e906eaa083cd9c584bb08adf}{void {\bfseries test\-Set\-Piece\-Exception} ()  throws Exception }\label{classBoard_1_1BoardTest_a672fcbc8e906eaa083cd9c584bb08adf}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_af9c5bad34b8cfa72a4131ca92c06875b}{void {\bfseries remove\-Piece} ()  throws Exception }\label{classBoard_1_1BoardTest_af9c5bad34b8cfa72a4131ca92c06875b}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a653f31e72b3b5aa6d775f3b7234a8207}{void {\bfseries check} ()  throws Exception }\label{classBoard_1_1BoardTest_a653f31e72b3b5aa6d775f3b7234a8207}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ace6072d8d0e7144454113e62b9ba6703}{void {\bfseries check\-Mate} ()  throws Exception }\label{classBoard_1_1BoardTest_ace6072d8d0e7144454113e62b9ba6703}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a6cca33a12e7caf99a18cd4f3846037c9}{void {\bfseries check\-Mate2} ()  throws Exception }\label{classBoard_1_1BoardTest_a6cca33a12e7caf99a18cd4f3846037c9}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a4e1243b5604936e1c651f851850644fd}{void {\bfseries test\-Move} ()  throws Exception }\label{classBoard_1_1BoardTest_a4e1243b5604936e1c651f851850644fd}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ad323c55fdd4ced38a9feb3c33905022c}{void {\bfseries test\-Move\-Exception} ()  throws Exception }\label{classBoard_1_1BoardTest_ad323c55fdd4ced38a9feb3c33905022c}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a4353e2b96f89dc3ddd8cf1a0967f2b73}{void {\bfseries get\-Board} ()  throws Exception }\label{classBoard_1_1BoardTest_a4353e2b96f89dc3ddd8cf1a0967f2b73}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a16e4087fb6a6d9d9e94f548c51c29aec}{void {\bfseries get\-Num\-Columns} ()  throws Exception }\label{classBoard_1_1BoardTest_a16e4087fb6a6d9d9e94f548c51c29aec}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_ab3b68e75b17a6392366cee7d3e8c25cf}{void {\bfseries get\-Num\-Rows} ()  throws Exception }\label{classBoard_1_1BoardTest_ab3b68e75b17a6392366cee7d3e8c25cf}
+
+\item 
+\hypertarget{classBoard_1_1BoardTest_a442991de8ee38de866f914259adbfed9}{void {\bfseries get\-Limit} ()  throws Exception }\label{classBoard_1_1BoardTest_a442991de8ee38de866f914259adbfed9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Created by taccio on 2/7/17. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Assignment1.\-0/test/\-Board/Board\-Test.\-java\item 
+test/\-Board/Board\-Test.\-java\end{DoxyCompactItemize}

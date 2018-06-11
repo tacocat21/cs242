@@ -1,0 +1,91 @@
+// TODO: vote by message_id
+var voted = {};
+
+var submitComment = function(elem) {
+
+    var id = $(elem).attr("id");
+    var idNumber = id.split("_")[1];
+    var isNewSubthread = id.split("_")[2];
+    var urlStr = $("#meta-data").attr("data-name");
+
+    $.ajax({url:"/comment/" + urlStr,
+            method:"POST",
+            data:{
+                'comment': document.getElementById("inputbox_"+idNumber+"_"+isNewSubthread).value,
+                'new_subthread': isNewSubthread,
+                'parent_message_id': idNumber
+            },
+            success:function (result) {
+                $('#message_board').replaceWith(result);
+            },
+            error: function (err){
+                console.log(err);
+            }
+    });
+};
+
+
+var upvote = function(elem){
+    var id = $(elem).attr("id");
+    var idNumber = id.split("_")[1];
+    var urlStr = $("#meta-data").attr("data-name");
+    if(urlStr in voted){
+        if(parseInt(idNumber) in voted[urlStr]){
+            return;
+        }
+    } else{
+        voted[urlStr] = {};
+    }
+
+    $.ajax({url:"/comment/upvote/" +idNumber + "/"+ urlStr,
+            method:"PUT",
+            success:function (result) {
+
+                voted[urlStr][parseInt(idNumber)] = true;
+                $('#message_board').replaceWith(result);
+            },
+            error: function (err){
+                console.log(err);
+            }
+    });
+};
+
+var showCommentBox = function(elem){
+    $(elem).next().css("display", "inline");
+}
+
+
+var downvote = function(elem){
+
+    var id = $(elem).attr("id");
+    var idNumber = id.split("_")[1];
+    var urlStr = $("#meta-data").attr("data-name");
+    if(urlStr in voted){
+        if(parseInt(idNumber) in voted[urlStr]){
+            return;
+        }
+    } else{
+        voted[urlStr] = {};
+    }
+    $.ajax({url:"/comment/downvote/" +idNumber + "/"+ urlStr,
+            method:"PUT",
+            success:function (result) {
+                voted[urlStr][parseInt(idNumber)];
+                // replace html code
+                $('#message_board').replaceWith(result);
+
+            },
+            error: function (err){
+                console.log(err);
+            }
+    });
+};
+
+$(document).ready(function(){
+    console.log("page ready");
+    $("#subdirectories").css("display", "show");
+    $("#subdirectories").fadeIn(2000);
+    $("#files").css("display", "show");
+    $("#files").fadeIn(2000);
+    $("#title").animate({fontSize:"50px"}, 2000);
+});

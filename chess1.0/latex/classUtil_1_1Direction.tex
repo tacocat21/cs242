@@ -1,0 +1,239 @@
+\hypertarget{classUtil_1_1Direction}{\section{Util.\-Direction Class Reference}
+\label{classUtil_1_1Direction}\index{Util.\-Direction@{Util.\-Direction}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUtil_1_1Direction_a4d016d4fe73c7c69bc0474ca3544e229}{Direction} (int dx, int dy, int distance)  throws Exception 
+\item 
+\hyperlink{classUtil_1_1Direction_aca0d10a0f6f1cab6b6453442db88ac41}{Direction} (int\mbox{[}$\,$\mbox{]} dir\-Vector, int distance)  throws Exception
+\item 
+\hyperlink{classUtil_1_1Direction_a96dc3c7b359455ce714e2a4fb3aa9f93}{Direction} (\hyperlink{classUtil_1_1Direction}{Direction} copy\-Dir)  throws Exception
+\item 
+\hyperlink{classUtil_1_1Direction_ab6cd1dac79dbe582e8d671c86be71244}{Direction} (\hyperlink{classUtil_1_1Position}{Position} initial, \hyperlink{classUtil_1_1Position}{Position} end, int distance)  throws Exception
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classUtil_1_1Direction_aec2a7a04741e2ef55d74f4635348cad3}{get\-Direction} ()
+\item 
+void \hyperlink{classUtil_1_1Direction_a0938e111d70b74e80faceba0f5146e17}{set\-Direction} (\hyperlink{classUtil_1_1Direction}{Direction} new\-Direction)
+\item 
+boolean \hyperlink{classUtil_1_1Direction_a8a6d78e18b047715a38078781b1fb813}{can\-Move\-In\-Direction} (\hyperlink{classUtil_1_1Position}{Position} current\-Position, \hyperlink{classUtil_1_1Position}{Position} target\-Position, \hyperlink{classBoard_1_1Board}{Board} board)  throws Exception
+\item 
+int \hyperlink{classUtil_1_1Direction_a5f52ca9bceaa59fc2afad1f87c5500ee}{get\-Distance} ()
+\item 
+void \hyperlink{classUtil_1_1Direction_aa5997dad71c8217853d08bd5987bfc61}{set\-Distance} (int distance)  throws Exception
+\item 
+void \hyperlink{classUtil_1_1Direction_aca852c23943cb0e955a5fe4aff888935}{set\-Direction} (int dx, int dy)
+\item 
+void \hyperlink{classUtil_1_1Direction_a0f498a800bfb0416047d0aafe12b5692}{set\-Direction} (int\mbox{[}$\,$\mbox{]} direction\-Arr)
+\item 
+void \hyperlink{classUtil_1_1Direction_af1244167566f6eb257798fd2d45012b5}{set\-Direction} (\hyperlink{classUtil_1_1Position}{Position} initial, \hyperlink{classUtil_1_1Position}{Position} end)  throws Exception 
+\item 
+boolean \hyperlink{classUtil_1_1Direction_aca147d8964ccb5618198c359998a6635}{equals} (\hyperlink{classUtil_1_1Direction}{Direction} other\-Direction)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle directions of each piece \begin{DoxyAuthor}{Author}
+Taccio Yamamoto 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUtil_1_1Direction_a4d016d4fe73c7c69bc0474ca3544e229}{\index{Util\-::\-Direction@{Util\-::\-Direction}!Direction@{Direction}}
+\index{Direction@{Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Direction.\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{dx, }
+\item[{int}]{dy, }
+\item[{int}]{distance}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a4d016d4fe73c7c69bc0474ca3544e229}
+Constructor to create direction objects 
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ row vector \\
+\hline
+{\em dy} & -\/ column vector \\
+\hline
+{\em distance} & -\/ distance piece can move, -\/1 if piece can move infinitely long until it reaches another piece \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_aca0d10a0f6f1cab6b6453442db88ac41}{\index{Util\-::\-Direction@{Util\-::\-Direction}!Direction@{Direction}}
+\index{Direction@{Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Direction.\-Direction (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{dir\-Vector, }
+\item[{int}]{distance}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_aca0d10a0f6f1cab6b6453442db88ac41}
+Constructor to create direction objects 
+\begin{DoxyParams}{Parameters}
+{\em dir\-Vector} & -\/ direction vector to assign to dir\-Vector \\
+\hline
+{\em distance} & -\/ distance piece can move, -\/1 if piece can move infinitely long until it reaches another piece \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_a96dc3c7b359455ce714e2a4fb3aa9f93}{\index{Util\-::\-Direction@{Util\-::\-Direction}!Direction@{Direction}}
+\index{Direction@{Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Direction.\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{copy\-Dir}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a96dc3c7b359455ce714e2a4fb3aa9f93}
+Constructor to create direction objects 
+\begin{DoxyParams}{Parameters}
+{\em copy\-Dir} & -\/ \hyperlink{classUtil_1_1Direction}{Direction} to copy from \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_ab6cd1dac79dbe582e8d671c86be71244}{\index{Util\-::\-Direction@{Util\-::\-Direction}!Direction@{Direction}}
+\index{Direction@{Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Direction.\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{initial, }
+\item[{{\bf Position}}]{end, }
+\item[{int}]{distance}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_ab6cd1dac79dbe582e8d671c86be71244}
+Constructor to create direction objects from position objects 
+\begin{DoxyParams}{Parameters}
+{\em initial} & -\/ initial position \\
+\hline
+{\em end} & -\/ end position \\
+\hline
+{\em distance} & -\/ distance piece can move, -\/1 if piece can move infinitely long until it reaches another piece \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classUtil_1_1Direction_a8a6d78e18b047715a38078781b1fb813}{\index{Util\-::\-Direction@{Util\-::\-Direction}!can\-Move\-In\-Direction@{can\-Move\-In\-Direction}}
+\index{can\-Move\-In\-Direction@{can\-Move\-In\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{can\-Move\-In\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}boolean Util.\-Direction.\-can\-Move\-In\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{current\-Position, }
+\item[{{\bf Position}}]{target\-Position, }
+\item[{{\bf Board}}]{board}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a8a6d78e18b047715a38078781b1fb813}
+Checks if the Direcion object allows to move from current\-Position to target\-Position. 
+\begin{DoxyParams}{Parameters}
+{\em current\-Position} & -\/ current position \\
+\hline
+{\em target\-Position} & -\/ target position \\
+\hline
+{\em board} & -\/ board object that keeps track of all the pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{classUtil_1_1Direction}{Direction} object can move from the current\-Position to the target\-Position 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Direction_aca147d8964ccb5618198c359998a6635}{\index{Util\-::\-Direction@{Util\-::\-Direction}!equals@{equals}}
+\index{equals@{equals}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean Util.\-Direction.\-equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{other\-Direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_aca147d8964ccb5618198c359998a6635}
+Checks if the two \hyperlink{classUtil_1_1Direction}{Direction} objects have the same direction vector 
+\begin{DoxyParams}{Parameters}
+{\em other\-Direction} & \hyperlink{classUtil_1_1Direction}{Direction} object to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean ths is true if both \hyperlink{classUtil_1_1Direction}{Direction} objects has the same direction 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Direction_aec2a7a04741e2ef55d74f4635348cad3}{\index{Util\-::\-Direction@{Util\-::\-Direction}!get\-Direction@{get\-Direction}}
+\index{get\-Direction@{get\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Util.\-Direction.\-get\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_aec2a7a04741e2ef55d74f4635348cad3}
+Returns direction vector \begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} array of the direction vector 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Direction_a5f52ca9bceaa59fc2afad1f87c5500ee}{\index{Util\-::\-Direction@{Util\-::\-Direction}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}int Util.\-Direction.\-get\-Distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a5f52ca9bceaa59fc2afad1f87c5500ee}
+Get distance function \begin{DoxyReturn}{Returns}
+distance piece can move, -\/1 if piece can move infinitely long until it reaches another piece 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Direction_a0938e111d70b74e80faceba0f5146e17}{\index{Util\-::\-Direction@{Util\-::\-Direction}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Direction.\-set\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{new\-Direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a0938e111d70b74e80faceba0f5146e17}
+Sets the direction vector 
+\begin{DoxyParams}{Parameters}
+{\em new\-Direction} & -\/ \hyperlink{classUtil_1_1Direction}{Direction} object to copy from \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_aca852c23943cb0e955a5fe4aff888935}{\index{Util\-::\-Direction@{Util\-::\-Direction}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Direction.\-set\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_aca852c23943cb0e955a5fe4aff888935}
+Sets the direction vector 
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ row vector \\
+\hline
+{\em dy} & -\/ column vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_a0f498a800bfb0416047d0aafe12b5692}{\index{Util\-::\-Direction@{Util\-::\-Direction}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Direction.\-set\-Direction (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{direction\-Arr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_a0f498a800bfb0416047d0aafe12b5692}
+Sets the direction vector 
+\begin{DoxyParams}{Parameters}
+{\em direction\-Arr} & -\/ direction vector to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Direction_af1244167566f6eb257798fd2d45012b5}{\index{Util\-::\-Direction@{Util\-::\-Direction}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Direction.\-set\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{initial, }
+\item[{{\bf Position}}]{end}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_af1244167566f6eb257798fd2d45012b5}
+Sets the direction vector 
+\begin{DoxyParams}{Parameters}
+{\em initial} & -\/ initial \hyperlink{classUtil_1_1Position}{Position} object \\
+\hline
+{\em end} & -\/ final \hyperlink{classUtil_1_1Position}{Position} object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & -\/ throws exception if the positions have different array lengths \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classUtil_1_1Direction_aa5997dad71c8217853d08bd5987bfc61}{\index{Util\-::\-Direction@{Util\-::\-Direction}!set\-Distance@{set\-Distance}}
+\index{set\-Distance@{set\-Distance}!Util::Direction@{Util\-::\-Direction}}
+\subsubsection[{set\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Direction.\-set\-Distance (
+\begin{DoxyParamCaption}
+\item[{int}]{distance}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Direction_aa5997dad71c8217853d08bd5987bfc61}
+Sets the distance function 
+\begin{DoxyParams}{Parameters}
+{\em distance} & -\/ new distance, -\/1 if piece can move infinitely long until it reaches another piece \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\-Util/Direction.\-java\end{DoxyCompactItemize}

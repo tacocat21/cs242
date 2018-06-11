@@ -1,0 +1,16 @@
+package Piece.Implementation;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by taccio on 2/7/17.
+ */
+public class PawnTest {
+    @Test
+    public void legalMoves() throws Exception {
+
+    }
+
+}

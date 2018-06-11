@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "chart.js": "^1.1.1",
+    "chartjs": "^0.3.24",
+    "react": "^15.5.4",
+    "react-chartjs": "^0.8.0",
+    "react-dom": "^15.5.4",
+    "react-responsive": "^1.2.7",
+    "requirejs": "^2.3.3"
+  },
+  "name": "242final",
+  "version": "1.0.0",
+  "description": "242final",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
+  },
+  "repository": {
+    "type": "svn",
+    "url": "https://subversion.ews.illinois.edu/svn/sp17-cs242/tyamamo2/Final0/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

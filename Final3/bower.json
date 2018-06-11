@@ -1,0 +1,21 @@
+{
+  "name": "242final",
+  "description": "242final",
+  "main": "src/web_frontend/pollResult/pollResultScript.js",
+  "authors": [
+    "Taccio Yamamoto <tyamamo2@illinois.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chart.js": "^2.5.0"
+  }
+}

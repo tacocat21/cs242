@@ -1,0 +1,203 @@
+\hypertarget{classUtil_1_1Position}{\section{Util.\-Position Class Reference}
+\label{classUtil_1_1Position}\index{Util.\-Position@{Util.\-Position}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUtil_1_1Position_a3d3221507de643f73d0fab607b20e347}{Position} (int\mbox{[}$\,$\mbox{]} start\-Limit, int\mbox{[}$\,$\mbox{]} start\-Position)  throws Exception 
+\item 
+\hyperlink{classUtil_1_1Position_ae7e3d03121824528793f53aec8545d23}{Position} (\hyperlink{classUtil_1_1Position}{Position} start\-Position)
+\item 
+void \hyperlink{classUtil_1_1Position_aad3684fa59219bb11bd5396a6849b372}{set\-Position} (\hyperlink{classUtil_1_1Position}{Position} new\-Position)  throws Exception
+\item 
+void \hyperlink{classUtil_1_1Position_a1c9b96f4cde809086723628f46eb4c94}{set\-Position} (int\mbox{[}$\,$\mbox{]} new\-Position)  throws Exception 
+\item 
+boolean \hyperlink{classUtil_1_1Position_aba2d90bf5a68f3270af5698a7b4876b3}{is\-Out\-Of\-Bound} (\hyperlink{classUtil_1_1Position}{Position} target\-Position)
+\item 
+void \hyperlink{classUtil_1_1Position_a170f73a1e2a6bb4d2d3cf132b301fea2}{move\-By\-Direction} (\hyperlink{classUtil_1_1Direction}{Direction} target\-Direction, int num\-Steps)  throws Exception
+\item 
+int \hyperlink{classUtil_1_1Position_a1fce53fb8f0786c8965deedb1d90ad41}{get\-Column} ()
+\item 
+int \hyperlink{classUtil_1_1Position_a582e48723db7f7d3aad37615e716f69e}{get\-Row} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classUtil_1_1Position_a570c27838adc08b0cb6e06f9e916d0d7}{get\-Position\-Array} ()
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{classUtil_1_1Position_a06f8180e1b836857874372dabcf6d5a9}{get\-Limit} ()
+\item 
+boolean \hyperlink{classUtil_1_1Position_ae730a2cd996df951618166141a790b79}{is\-Equal} (\hyperlink{classUtil_1_1Position}{Position} other\-Position)
+\item 
+int \hyperlink{classUtil_1_1Position_a0f7226ab6a40202983339152b5d5455d}{get\-Num\-Dimension} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classUtil_1_1Position}{Position} object to keep track of the position of a single Piece object \begin{DoxyAuthor}{Author}
+Taccio Yamamoto \href{mailto:tyamamo2@illinois.edu}{\tt tyamamo2@illinois.\-edu} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUtil_1_1Position_a3d3221507de643f73d0fab607b20e347}{\index{Util\-::\-Position@{Util\-::\-Position}!Position@{Position}}
+\index{Position@{Position}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Position.\-Position (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{start\-Limit, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{start\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a3d3221507de643f73d0fab607b20e347}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em start\-Limit} & -\/ an array to set the upper bound of the piece position. The lower bound is 0. \\
+\hline
+{\em start\-Position} & -\/ an array to set the position of the piece \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws an exception if the start\-Position is out of bounds or the start\-Limit and start\-Position have different lengths \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classUtil_1_1Position_ae7e3d03121824528793f53aec8545d23}{\index{Util\-::\-Position@{Util\-::\-Position}!Position@{Position}}
+\index{Position@{Position}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}Util.\-Position.\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{start\-Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_ae7e3d03121824528793f53aec8545d23}
+Copy constructor 
+\begin{DoxyParams}{Parameters}
+{\em start\-Position} & -\/ \hyperlink{classUtil_1_1Position}{Position} object to copy from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classUtil_1_1Position_a1fce53fb8f0786c8965deedb1d90ad41}{\index{Util\-::\-Position@{Util\-::\-Position}!get\-Column@{get\-Column}}
+\index{get\-Column@{get\-Column}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{get\-Column}]{\setlength{\rightskip}{0pt plus 5cm}int Util.\-Position.\-get\-Column (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a1fce53fb8f0786c8965deedb1d90ad41}
+Get column number \begin{DoxyReturn}{Returns}
+column number 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_a06f8180e1b836857874372dabcf6d5a9}{\index{Util\-::\-Position@{Util\-::\-Position}!get\-Limit@{get\-Limit}}
+\index{get\-Limit@{get\-Limit}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{get\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Util.\-Position.\-get\-Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a06f8180e1b836857874372dabcf6d5a9}
+returns the upper bound limit of the board \begin{DoxyReturn}{Returns}
+the array representation of the upper bound limit of the board 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_a0f7226ab6a40202983339152b5d5455d}{\index{Util\-::\-Position@{Util\-::\-Position}!get\-Num\-Dimension@{get\-Num\-Dimension}}
+\index{get\-Num\-Dimension@{get\-Num\-Dimension}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{get\-Num\-Dimension}]{\setlength{\rightskip}{0pt plus 5cm}int Util.\-Position.\-get\-Num\-Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a0f7226ab6a40202983339152b5d5455d}
+the length of the position array \begin{DoxyReturn}{Returns}
+-\/ the length of the position array 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_a570c27838adc08b0cb6e06f9e916d0d7}{\index{Util\-::\-Position@{Util\-::\-Position}!get\-Position\-Array@{get\-Position\-Array}}
+\index{get\-Position\-Array@{get\-Position\-Array}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{get\-Position\-Array}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Util.\-Position.\-get\-Position\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a570c27838adc08b0cb6e06f9e916d0d7}
+Gets the array representation of the position \begin{DoxyReturn}{Returns}
+array representation of the position 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_a582e48723db7f7d3aad37615e716f69e}{\index{Util\-::\-Position@{Util\-::\-Position}!get\-Row@{get\-Row}}
+\index{get\-Row@{get\-Row}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{get\-Row}]{\setlength{\rightskip}{0pt plus 5cm}int Util.\-Position.\-get\-Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a582e48723db7f7d3aad37615e716f69e}
+Get row number \begin{DoxyReturn}{Returns}
+row number 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_ae730a2cd996df951618166141a790b79}{\index{Util\-::\-Position@{Util\-::\-Position}!is\-Equal@{is\-Equal}}
+\index{is\-Equal@{is\-Equal}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{is\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}boolean Util.\-Position.\-is\-Equal (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{other\-Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_ae730a2cd996df951618166141a790b79}
+Checks if the other\-Position object has the same position as this object 
+\begin{DoxyParams}{Parameters}
+{\em other\-Position} & -\/ \hyperlink{classUtil_1_1Position}{Position} object to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the other object has the same position 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_aba2d90bf5a68f3270af5698a7b4876b3}{\index{Util\-::\-Position@{Util\-::\-Position}!is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}}
+\index{is\-Out\-Of\-Bound@{is\-Out\-Of\-Bound}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{is\-Out\-Of\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}boolean Util.\-Position.\-is\-Out\-Of\-Bound (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{target\-Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_aba2d90bf5a68f3270af5698a7b4876b3}
+Checks if the target\-Position is beyond the limit defined in the position object \begin{DoxyReturn}{Returns}
+true if the target\-Position is out\-Of\-Bound 
+\end{DoxyReturn}
+\hypertarget{classUtil_1_1Position_a170f73a1e2a6bb4d2d3cf132b301fea2}{\index{Util\-::\-Position@{Util\-::\-Position}!move\-By\-Direction@{move\-By\-Direction}}
+\index{move\-By\-Direction@{move\-By\-Direction}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{move\-By\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Position.\-move\-By\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{target\-Direction, }
+\item[{int}]{num\-Steps}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a170f73a1e2a6bb4d2d3cf132b301fea2}
+moves the position in the target\-Direction by num\-Steps 
+\begin{DoxyParams}{Parameters}
+{\em target\-Direction} & -\/ target direction to move to \\
+\hline
+{\em num\-Steps} & -\/ number of steps to move in target direction \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUtil_1_1Position_aad3684fa59219bb11bd5396a6849b372}{\index{Util\-::\-Position@{Util\-::\-Position}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Position.\-set\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{new\-Position}
+\end{DoxyParamCaption}
+)  throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_aad3684fa59219bb11bd5396a6849b372}
+Sets the new position of the object given a \hyperlink{classUtil_1_1Position}{Position} object 
+\begin{DoxyParams}{Parameters}
+{\em new\-Position} & -\/ \hyperlink{classUtil_1_1Position}{Position} object to copy from \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & -\/ throws Exception if the input position object has different position array lengths \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classUtil_1_1Position_a1c9b96f4cde809086723628f46eb4c94}{\index{Util\-::\-Position@{Util\-::\-Position}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Util::Position@{Util\-::\-Position}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Util.\-Position.\-set\-Position (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{new\-Position}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classUtil_1_1Position_a1c9b96f4cde809086723628f46eb4c94}
+Sets the new position of the object and checks if new position is within boundary. 
+\begin{DoxyParams}{Parameters}
+{\em new\-Position} & -\/ an array to set the new position of the piece \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & -\/ throws Exception if the new\-Position is out of bounds \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\-Util/Position.\-java\end{DoxyCompactItemize}

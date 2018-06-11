@@ -1,0 +1,16 @@
+\hypertarget{classPiece_1_1Implementation_1_1Bishop}{\section{Piece.\-Implementation.\-Bishop Class Reference}
+\label{classPiece_1_1Implementation_1_1Bishop}\index{Piece.\-Implementation.\-Bishop@{Piece.\-Implementation.\-Bishop}}
+}
+Inheritance diagram for Piece.\-Implementation.\-Bishop\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPiece_1_1Implementation_1_1Bishop}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPiece_1_1Implementation_1_1Bishop_a94578631257280ceb1491c0d1cd1bb6a}{Bishop} (\hyperlink{classUtil_1_1Position}{Position} start\-Position, int assign\-User\-Id, int assign\-Piece\-Id)  throws Exception 
+\item 
+\hyperlink{classPiece_1_1Implementation_1_1Bishop_a94578631257280ceb1491c0d1cd1bb6a}{Bishop} (\hyperlink{classUtil_1_1Position}{Position} start\-Position, int assign\-User\-Id, int assign\-Piece\-Id)  throws Exception 
+\end{DoxyCompactItemize}

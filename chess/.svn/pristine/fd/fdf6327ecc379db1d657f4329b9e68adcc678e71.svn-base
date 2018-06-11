@@ -1,0 +1,84 @@
+package UserInterface;
+
+import javax.swing.*;
+import java.awt.*;
+
+/**
+ * User interface for the chess application
+ */
+public class UserInterface extends JFrame {
+    private int NUMCOL = 8;
+    private int COLLENGTH = 60;
+    private int NUMROW = 8;
+    private int ROWLENGTH = 60;
+
+    /**
+     * Constructor
+     */
+    public UserInterface() {
+        createBoard();
+    }
+
+    /**
+     * Paint the frame with a chessboard and pieces
+     * @param g - Graphics object to call paint functions
+     */
+    public void paint(Graphics g) {
+        for(int row = 0; row < NUMROW; row++) {
+            for(int col = 0; col < NUMCOL; col++) {
+                int xPosition = col * COLLENGTH;
+                int yPosition = row * ROWLENGTH;
+                if ((row + col) % 2 == 0)
+                    g.setColor(Color.WHITE);
+                else
+                    g.setColor(new Color(150, 150, 150));
+
+                g.fillRect(xPosition, yPosition, ROWLENGTH, COLLENGTH);
+            }
+        }
+        initializeBlackPieces(g);
+        initializeWhitePieces(g);
+    }
+
+    /**
+     * Prints the black pieces on the screen.
+     * @param g - Graphics object to call paint functions
+     */
+    public void initializeBlackPieces(Graphics g) {
+        g.setColor(Color.BLACK);
+        String[] backline = new String[] {"Rb", "Nb", "Bb", "Qb", "Kb", "Bb", "Nb", "Rb"};
+        for(int col = 0; col < NUMCOL; col++){
+            int xPos = (int)(((float)(col+0.5)) * ROWLENGTH);
+            g.drawString(backline[col], xPos, (int)(0.5*COLLENGTH));
+            g.drawString("Pb", xPos, (int)(1.5*COLLENGTH));
+        }
+    }
+
+    /**
+     * Prints the white pieces on the screen
+     * @param g - Graphics object to call paint functions
+     */
+    public void initializeWhitePieces(Graphics g) {
+        g.setColor(Color.BLACK);
+        String[] backline = new String[] {"Rw", "Nw", "Bw", "Qw", "Kw", "Bw", "Nw", "Rw"};
+        for(int col = 0; col < NUMCOL; col++){
+            int xPos = (int)(((float)(col+0.5)) * ROWLENGTH);
+            g.drawString(backline[col], xPos, (int)((NUMCOL-0.5)*COLLENGTH));
+            g.drawString("Pw", xPos, (int)((NUMCOL-1.5)*COLLENGTH));
+        }
+    }
+
+    /**
+     * Initializes the Frame
+     */
+    public void createBoard() {
+        setTitle("Chess Game");
+        setSize(ROWLENGTH * NUMROW, COLLENGTH * NUMCOL);
+        setVisible(true);
+    }
+
+    public static void main(String args[]) {
+        UserInterface check = new UserInterface();
+
+    }
+}

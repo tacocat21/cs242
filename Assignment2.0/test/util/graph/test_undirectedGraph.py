@@ -1,0 +1,91 @@
+from unittest import TestCase
+from src.util.graph.undirectedgraph import UndirectedGraph
+
+class TestUndirectedGraph(TestCase):
+
+    def setUp(self):
+        self.graph = UndirectedGraph()
+        self.node_0 = self.graph.add_node(0)
+        self.node_1 = self.graph.add_node(1)
+        self.node_2 = self.graph.add_node(2)
+        self.node_3 = self.graph.add_node(3)
+        self.node_4 = self.graph.add_node(4)
+        self.node_5 = self.graph.add_node(5)
+        self.graph.add_edge(self.node_1, self.node_0, edge_weight='1-0', edge_status='status1-0')
+        self.graph.add_edge(self.node_1, self.node_2, edge_weight='1-2', edge_status='status1-2')
+        self.graph.add_edge(self.node_3, self.node_2, edge_weight='3-2', edge_status='status3-2')
+        self.graph.add_edge(self.node_4, self.node_2, edge_weight='4-2', edge_status='status4-2')
+
+    def test_is_adjacent(self):
+        self.assertTrue(self.graph.is_adjacent(self.node_0, self.node_1))
+        self.assertFalse(self.graph.is_adjacent(self.node_0, self.node_5))
+
+    def test_add_node(self):
+        self.assertEqual(self.graph.get_num_nodes(), 6)
+        self.new_node = self.graph.add_node(6)
+        self.assertEqual(self.graph.get_num_nodes(), 7)
+        self.assertTrue(self.graph.get_node_by_id(self.new_node.get_id()).equals(self.new_node))
+
+    def test_get_node_by_id(self):
+        self.assertTrue(self.graph.get_node_by_id(self.node_1.get_id()).equals(self.node_1))
+        self.assertFalse(self.graph.get_node_by_id(self.node_5.get_id()).equals(self.node_0))
+
+    def test_remove_node(self):
+        self.assertEqual(self.graph.get_num_nodes(), 6)
+        self.graph.remove_node(self.node_1)
+        self.assertEqual(self.graph.get_num_nodes(), 5)
+        self.assertEqual(self.graph.get_node_by_id(self.node_1.get_id()), None)
+        self.assertFalse(self.graph.is_adjacent(self.node_1, self.node_2))
+        self.assertFalse(self.graph.is_adjacent(self.node_1, self.node_0))
+
+    def test_add_edge(self):
+        self.assertFalse(self.graph.is_adjacent(self.node_0, self.node_5))
+        self.graph.add_edge(self.node_0, self.node_5, edge_weight='0-5', edge_status='status0-5')
+        self.assertTrue(self.graph.is_adjacent(self.node_0, self.node_5))
+
+    def test_remove_edge(self):
+        self.assertTrue(self.graph.is_adjacent(self.node_0, self.node_1))
+        self.graph.remove_edge(self.node_1, self.node_0)
+        self.assertFalse(self.graph.is_adjacent(self.node_0, self.node_1))
+
+    def test_get_node_value(self):
+        self.assertEqual(self.graph.get_node_value(self.node_0), 0)
+
+    def test_set_node_value(self):
+        self.assertEqual(self.graph.get_node_value(self.node_0), 0)
+        self.graph.set_node_value(self.node_0, 10)
+        self.assertEqual(self.graph.get_node_value(self.node_0), 10)
+
+    def test_get_edge_weight(self):
+        self.assertEqual(self.graph.get_edge_weight(self.node_0, self.node_1), '1-0')
+        self.assertEqual(self.graph.get_edge_weight(self.node_0, self.node_5), None)
+
+    def test_set_edge_weight(self):
+        self.assertEqual(self.graph.get_edge_weight(self.node_0, self.node_1), '1-0')
+        self.graph.set_edge_weight(self.node_0, self.node_1, 'new value')
+        self.assertEqual(self.graph.get_edge_weight(self.node_0, self.node_1), 'new value')
+
+    def test_shortest_path_edge_length_1(self):
+        dist_node_0 = self.graph.shortest_path_edge_length_1(self.node_0)
+        self.assertEqual(dist_node_0[self.node_0], 0)
+        self.assertEqual(dist_node_0[self.node_1], 1)
+        self.assertEqual(dist_node_0[self.node_2], 2)
+        self.assertEqual(dist_node_0[self.node_3], 3)
+        self.assertEqual(dist_node_0[self.node_4], 3)
+        self.assertTrue(self.node_5 not in dist_node_0)
+
+        node_6 = self.graph.add_node(6)
+        node_7 = self.graph.add_node(7)
+        self.graph.add_edge(self.node_5, self.node_3)
+        self.graph.add_edge(self.node_5, node_6)
+        self.graph.add_edge(self.node_1, node_6)
+        self.graph.add_edge(self.node_3, node_7)
+        dist_node_0_1 = self.graph.shortest_path_edge_length_1(self.node_0)
+        self.assertEqual(dist_node_0_1[self.node_0], 0)
+        self.assertEqual(dist_node_0_1[self.node_1], 1)
+        self.assertEqual(dist_node_0_1[self.node_2], 2)
+        self.assertEqual(dist_node_0_1[self.node_3], 3)
+        self.assertEqual(dist_node_0_1[self.node_4], 3)
+        self.assertEqual(dist_node_0_1[self.node_5], 3)
+        self.assertEqual(dist_node_0_1[node_6], 2)
+        self.assertEqual(dist_node_0_1[node_7], 4)

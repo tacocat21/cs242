@@ -1,0 +1,7 @@
+{
+  "test/crawler/test_wikipediaMovieCrawler.py::TestWikipediaMovieCrawler::test_get_actor_data": true,
+  "test/crawler/test_wikipediaMovieCrawler.py::TestWikipediaMovieCrawler::test_get_actor_data_as_json": true,
+  "test/crawler/test_wikipediaMovieCrawler.py::TestWikipediaMovieCrawler::test_get_movie_data": true,
+  "test/crawler/test_wikipediaMovieCrawler.py::TestWikipediaMovieCrawler::test_get_movie_data_as_json": true,
+  "test/crawler/test_wikipediaMovieCrawler.py::TestWikipediaMovieCrawler::test_is_movie": true
+}

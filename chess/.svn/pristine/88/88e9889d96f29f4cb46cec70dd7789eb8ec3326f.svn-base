@@ -1,0 +1,36 @@
+package Piece.Implementation;
+
+import Board.Board;
+import Piece.Piece;
+import Util.Position;
+
+/**
+ * Created by taccio on 2/5/17.
+ */
+public class King extends Piece{
+    public King(Position startPosition, int assignUserId, int assignPieceId) {
+        super(startPosition, assignUserId, assignPieceId);
+    }
+
+    /*
+         * Returns a list of all the directions the piece can make
+         * @param Board - a 2D Piece array representation of the board
+         */
+    public boolean[][] legalMoves(Piece[] enemyPiece, Board board) {
+        if(this.legalPositions != null) {
+            return this.legalPositions;
+        }
+
+        this.initLegalPositionsArray(board.getNumColumns(), board.getNumColumns(), false);
+        int currentCol = this.position.getColumn();
+        int currentRow = this.position.getRow();
+        for(int row = currentRow-1; row< currentRow+1; row++) {
+            for(int col = currentCol - 1; col < currentCol + 1; col++){
+                this.setLegalPositionValue(row, col, true);
+            }
+        }
+        // TODO: Finish checking if the other pieces can reach the neighboring locations
+        return this.legalPositions;
+    }
+
+}

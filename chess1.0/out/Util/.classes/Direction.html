@@ -1,0 +1,337 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Direction</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Util</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Direction (Util)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Direction</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    93.8%
+  </span>
+  <span class="absValue">
+    (15/ 16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91.9%
+  </span>
+  <span class="absValue">
+    (91/ 99)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package Util;
+<i>2</i>&nbsp;import Board.Board;
+<i>3</i>&nbsp;import Piece.Piece;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;/**
+<i>6</i>&nbsp; * Class to handle directions of each piece
+<i>7</i>&nbsp; * @author Taccio Yamamoto
+<i>8</i>&nbsp; */
+<i>9</i>&nbsp;public class Direction {
+<i>10</i>&nbsp;    private int [] dirVector;
+<i>11</i>&nbsp;    private int distance;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    /**
+<i>14</i>&nbsp;     * Constructor to create direction objects
+<i>15</i>&nbsp;     * @param dx - row vector
+<i>16</i>&nbsp;     * @param dy - column vector
+<i>17</i>&nbsp;     * @param distance - distance piece can move, -1 if piece can move
+<i>18</i>&nbsp;     *                 infinitely long until it reaches another piece
+<i>19</i>&nbsp;     */
+<b class="fc"><i>20</i>&nbsp;    public Direction(int dx, int dy, int distance) throws Exception {</b>
+<b class="fc"><i>21</i>&nbsp;        this.dirVector = new int[] {dx, dy};</b>
+<b class="fc"><i>22</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>23</i>&nbsp;        this.setDistance(distance);</b>
+<b class="fc"><i>24</i>&nbsp;    }</b>
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    /**
+<i>27</i>&nbsp;     * Constructor to create direction objects
+<i>28</i>&nbsp;     * @param dirVector - direction vector to assign to dirVector
+<i>29</i>&nbsp;     * @param distance - distance piece can move, -1 if piece can move
+<i>30</i>&nbsp;     *                 infinitely long until it reaches another piece
+<i>31</i>&nbsp;     */
+<b class="fc"><i>32</i>&nbsp;    public Direction(int[] dirVector, int distance) throws Exception{</b>
+<b class="fc"><i>33</i>&nbsp;        this.dirVector = new int[2];</b>
+<b class="fc"><i>34</i>&nbsp;        for(int idx =0; idx &lt; dirVector.length; idx++ ) {</b>
+<b class="fc"><i>35</i>&nbsp;            this.dirVector[idx] = dirVector[idx];</b>
+<i>36</i>&nbsp;        }
+<b class="fc"><i>37</i>&nbsp;        this.setDistance(distance);</b>
+<b class="fc"><i>38</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>39</i>&nbsp;    }</b>
+<i>40</i>&nbsp;    /**
+<i>41</i>&nbsp;     * Constructor to create direction objects
+<i>42</i>&nbsp;     * @param copyDir - Direction to copy from
+<i>43</i>&nbsp;     */
+<b class="fc"><i>44</i>&nbsp;    public Direction(Direction copyDir) throws Exception{</b>
+<b class="fc"><i>45</i>&nbsp;        int[] copyVector = copyDir.getDirection();</b>
+<b class="fc"><i>46</i>&nbsp;        this.dirVector = new int[2];</b>
+<b class="fc"><i>47</i>&nbsp;        for(int idx = 0; idx&lt;this.dirVector.length; idx++) {</b>
+<b class="fc"><i>48</i>&nbsp;            this.dirVector[idx] = copyVector[idx];</b>
+<i>49</i>&nbsp;        }
+<b class="fc"><i>50</i>&nbsp;        this.setDistance(copyDir.getDistance());</b>
+<b class="fc"><i>51</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>52</i>&nbsp;    }</b>
+<i>53</i>&nbsp;
+<i>54</i>&nbsp;    /**
+<i>55</i>&nbsp;     * Constructor to create direction objects from position objects
+<i>56</i>&nbsp;     * @param initial - initial position
+<i>57</i>&nbsp;     * @param end - end position
+<i>58</i>&nbsp;     * @param distance - distance piece can move, -1 if piece can move
+<i>59</i>&nbsp;     *                 infinitely long until it reaches another piece
+<i>60</i>&nbsp;     */
+<b class="fc"><i>61</i>&nbsp;    public Direction(Position initial, Position end, int distance) throws Exception{</b>
+<b class="fc"><i>62</i>&nbsp;        int[] initial_array = initial.getPositionArray();</b>
+<b class="fc"><i>63</i>&nbsp;        int[] end_array = end.getPositionArray();</b>
+<b class="fc"><i>64</i>&nbsp;        if(initial_array.length != end_array.length) {</b>
+<b class="nc"><i>65</i>&nbsp;            throw new Exception(&quot;Initial and end positions have different array distance&quot;);</b>
+<i>66</i>&nbsp;        }
+<b class="fc"><i>67</i>&nbsp;        dirVector = new int[initial_array.length];</b>
+<b class="fc"><i>68</i>&nbsp;        for(int idx=0; idx &lt; dirVector.length; idx++) {</b>
+<b class="fc"><i>69</i>&nbsp;            dirVector[idx] = end_array[idx] - initial_array[idx];</b>
+<i>70</i>&nbsp;        }
+<b class="fc"><i>71</i>&nbsp;        this.setDistance(distance);</b>
+<b class="fc"><i>72</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>73</i>&nbsp;    }</b>
+<i>74</i>&nbsp;
+<i>75</i>&nbsp;    /**
+<i>76</i>&nbsp;     * Returns direction vector
+<i>77</i>&nbsp;     * @return int[] array of the direction vector
+<i>78</i>&nbsp;     */
+<i>79</i>&nbsp;    public int[] getDirection() {
+<b class="fc"><i>80</i>&nbsp;        return this.dirVector;</b>
+<i>81</i>&nbsp;    }
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;    /**
+<i>84</i>&nbsp;     * Sets the direction vector
+<i>85</i>&nbsp;     * @param newDirection - Direction object to copy from
+<i>86</i>&nbsp;     */
+<i>87</i>&nbsp;    public void setDirection(Direction newDirection) {
+<b class="fc"><i>88</i>&nbsp;        int[] copyArray = newDirection.getDirection();</b>
+<b class="fc"><i>89</i>&nbsp;        for(int idx=0; idx &lt; this.dirVector.length; idx++) {</b>
+<b class="fc"><i>90</i>&nbsp;            this.dirVector[idx] = copyArray[idx];</b>
+<i>91</i>&nbsp;        }
+<b class="fc"><i>92</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>93</i>&nbsp;    }</b>
+<i>94</i>&nbsp;
+<i>95</i>&nbsp;    /**
+<i>96</i>&nbsp;     * Checks if the Direcion object allows to move from currentPosition
+<i>97</i>&nbsp;     * to targetPosition.
+<i>98</i>&nbsp;     * @param currentPosition - current position
+<i>99</i>&nbsp;     * @param targetPosition - target position
+<i>100</i>&nbsp;     * @param board - board object that keeps track of all the pieces
+<i>101</i>&nbsp;     * @return true if the Direction object can move from the currentPosition
+<i>102</i>&nbsp;     * to the targetPosition
+<i>103</i>&nbsp;     */
+<i>104</i>&nbsp;    public boolean canMoveInDirection(Position currentPosition, Position targetPosition, Board board) throws Exception{
+<b class="fc"><i>105</i>&nbsp;        if(currentPosition.isEqual(targetPosition)){</b>
+<b class="nc"><i>106</i>&nbsp;            return true;</b>
+<i>107</i>&nbsp;        }
+<b class="fc"><i>108</i>&nbsp;        Direction directionVector = new Direction(currentPosition, targetPosition, -1);</b>
+<i>109</i>&nbsp;        // calculate change in position
+<b class="fc"><i>110</i>&nbsp;        int [] directionVectorArr = new int[2];</b>
+<b class="fc"><i>111</i>&nbsp;        int [] currentPositionArr = currentPosition.getPositionArray();</b>
+<b class="fc"><i>112</i>&nbsp;        int [] targetPositionArr = targetPosition.getPositionArray();</b>
+<b class="fc"><i>113</i>&nbsp;        for(int idx = 0; idx &lt; directionVectorArr.length; idx++) {</b>
+<b class="fc"><i>114</i>&nbsp;            directionVectorArr[idx] = targetPositionArr[idx] - currentPositionArr[idx];</b>
+<i>115</i>&nbsp;        }
+<b class="fc"><i>116</i>&nbsp;        if(this.equals(directionVector)){</b>
+<i>117</i>&nbsp;            // The GCD measures how many steps it will take to reach the target position
+<i>118</i>&nbsp;            // if GCD = 0, the targetPosition and currentPosition are at the same position
+<i>119</i>&nbsp;            // at that dimension
+<b class="fc"><i>120</i>&nbsp;            int firstIdxGCD = this.gcd(this.dirVector[0], directionVectorArr[0]);</b>
+<b class="fc"><i>121</i>&nbsp;            int secondIdxGCD = this.gcd(this.dirVector[1], directionVectorArr[1]);</b>
+<b class="fc"><i>122</i>&nbsp;            if(this.distance == -1</b>
+<i>123</i>&nbsp;                    || (this.distance &gt;= firstIdxGCD &amp;&amp; firstIdxGCD != 0)
+<i>124</i>&nbsp;                    || (this.distance &gt;= secondIdxGCD &amp;&amp; secondIdxGCD != 0)){
+<i>125</i>&nbsp;                    // Copies the position so it won&#39;t modify the currentPosition object
+<b class="fc"><i>126</i>&nbsp;                    Position copyPosition = new Position(currentPosition);</b>
+<i>127</i>&nbsp;                //iterate through the path to see if there is a piece on the way
+<b class="fc"><i>128</i>&nbsp;                while (!board.isOutOfBound(copyPosition)) {</b>
+<b class="fc"><i>129</i>&nbsp;                        copyPosition.moveByDirection(this, 1);</b>
+<b class="fc"><i>130</i>&nbsp;                        if (copyPosition.isEqual(targetPosition)) {</b>
+<b class="fc"><i>131</i>&nbsp;                            return true;</b>
+<i>132</i>&nbsp;                        }
+<b class="fc"><i>133</i>&nbsp;                        Piece currentPositionPiece = board.getPiece(copyPosition);</b>
+<b class="fc"><i>134</i>&nbsp;                        if (currentPositionPiece == null) {</b>
+<b class="fc"><i>135</i>&nbsp;                            continue;</b>
+<i>136</i>&nbsp;                        } else{
+<b class="fc"><i>137</i>&nbsp;                            return false;</b>
+<i>138</i>&nbsp;                        }
+<i>139</i>&nbsp;                    };
+<i>140</i>&nbsp;            }
+<i>141</i>&nbsp;        }
+<b class="fc"><i>142</i>&nbsp;        return false;</b>
+<i>143</i>&nbsp;
+<i>144</i>&nbsp;    }
+<i>145</i>&nbsp;    /**
+<i>146</i>&nbsp;     * Get distance function
+<i>147</i>&nbsp;     * @return distance piece can move, -1 if piece can move
+<i>148</i>&nbsp;     *         infinitely long until it reaches another piece
+<i>149</i>&nbsp;     */
+<i>150</i>&nbsp;    public int getDistance() {
+<b class="fc"><i>151</i>&nbsp;        return this.distance;</b>
+<i>152</i>&nbsp;    }
+<i>153</i>&nbsp;
+<i>154</i>&nbsp;    /**
+<i>155</i>&nbsp;     * Sets the distance function
+<i>156</i>&nbsp;     * @param distance - new distance, -1 if piece can move
+<i>157</i>&nbsp;     *         infinitely long until it reaches another piece
+<i>158</i>&nbsp;     */
+<i>159</i>&nbsp;    public void setDistance(int distance) throws Exception{
+<b class="fc"><i>160</i>&nbsp;        this.distance = distance;</b>
+<b class="fc"><i>161</i>&nbsp;        if(distance &lt; -1) {</b>
+<b class="nc"><i>162</i>&nbsp;            throw new Exception(&quot;Invalid distance value&quot;);</b>
+<i>163</i>&nbsp;        }
+<b class="fc"><i>164</i>&nbsp;    }</b>
+<i>165</i>&nbsp;
+<i>166</i>&nbsp;    /**
+<i>167</i>&nbsp;     * Sets the direction vector
+<i>168</i>&nbsp;     * @param dx - row vector
+<i>169</i>&nbsp;     * @param dy - column vector
+<i>170</i>&nbsp;     */
+<i>171</i>&nbsp;    public void setDirection(int dx, int dy) {
+<b class="nc"><i>172</i>&nbsp;        this.dirVector[0] = dx;</b>
+<b class="nc"><i>173</i>&nbsp;        this.dirVector[1] = dy;</b>
+<b class="nc"><i>174</i>&nbsp;        this.simplify();</b>
+<b class="nc"><i>175</i>&nbsp;    }</b>
+<i>176</i>&nbsp;
+<i>177</i>&nbsp;    /**
+<i>178</i>&nbsp;     * Sets the direction vector
+<i>179</i>&nbsp;     * @param directionArr - direction vector to set
+<i>180</i>&nbsp;     */
+<i>181</i>&nbsp;    public void setDirection(int[] directionArr) {
+<b class="fc"><i>182</i>&nbsp;        for(int idx = 0; idx &lt; directionArr.length; idx++) {</b>
+<b class="fc"><i>183</i>&nbsp;            this.dirVector[idx]  = directionArr[idx];</b>
+<i>184</i>&nbsp;        }
+<b class="fc"><i>185</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>186</i>&nbsp;    }</b>
+<i>187</i>&nbsp;
+<i>188</i>&nbsp;    /**
+<i>189</i>&nbsp;     * Sets the direction vector
+<i>190</i>&nbsp;     * @param initial - initial Position object
+<i>191</i>&nbsp;     * @param end - final Position object
+<i>192</i>&nbsp;     * @throws Exception - throws exception if the positions have different array lengths
+<i>193</i>&nbsp;     */
+<i>194</i>&nbsp;    public void setDirection(Position initial, Position end) throws Exception {
+<b class="fc"><i>195</i>&nbsp;        int[] initial_array = initial.getPositionArray();</b>
+<b class="fc"><i>196</i>&nbsp;        int[] end_array = end.getPositionArray();</b>
+<b class="fc"><i>197</i>&nbsp;        if(initial_array.length != end_array.length) {</b>
+<b class="nc"><i>198</i>&nbsp;            throw new Exception(&quot;Initial and end positions have different array distance&quot;);</b>
+<i>199</i>&nbsp;        }
+<b class="fc"><i>200</i>&nbsp;        dirVector = new int[initial_array.length];</b>
+<b class="fc"><i>201</i>&nbsp;        for(int idx=0; idx &lt; dirVector.length; idx++) {</b>
+<b class="fc"><i>202</i>&nbsp;            dirVector[idx] = end_array[idx] - initial_array[idx];</b>
+<i>203</i>&nbsp;        }
+<b class="fc"><i>204</i>&nbsp;        this.simplify();</b>
+<b class="fc"><i>205</i>&nbsp;    }</b>
+<i>206</i>&nbsp;
+<i>207</i>&nbsp;    /**
+<i>208</i>&nbsp;     * Checks if the two Direction objects have the same direction vector
+<i>209</i>&nbsp;     * @param otherDirection Direction object to compare to
+<i>210</i>&nbsp;     * @return boolean ths is true if both Direction objects has the same direction
+<i>211</i>&nbsp;     */
+<i>212</i>&nbsp;    public boolean equals(Direction otherDirection) {
+<b class="fc"><i>213</i>&nbsp;        boolean isEqual = true;</b>
+<b class="fc"><i>214</i>&nbsp;        int[] otherDirectionVector = otherDirection.getDirection();</b>
+<b class="fc"><i>215</i>&nbsp;        for(int idx = 0; idx &lt; this.dirVector.length; idx++) {</b>
+<b class="fc"><i>216</i>&nbsp;            isEqual = isEqual &amp;&amp; (this.dirVector[idx] == otherDirectionVector[idx]);</b>
+<i>217</i>&nbsp;        }
+<b class="fc"><i>218</i>&nbsp;        return isEqual;</b>
+<i>219</i>&nbsp;    }
+<i>220</i>&nbsp;    /**
+<i>221</i>&nbsp;     * Divides the dirVector by its greatest common denominator
+<i>222</i>&nbsp;     */
+<i>223</i>&nbsp;    private void simplify() {
+<b class="fc"><i>224</i>&nbsp;        int gcd = this.gcd();</b>
+<b class="fc"><i>225</i>&nbsp;        for(int idx = 0; idx &lt; this.dirVector.length; idx++) {</b>
+<b class="fc"><i>226</i>&nbsp;            this.dirVector[idx] = this.dirVector[idx]/gcd;</b>
+<i>227</i>&nbsp;        }
+<b class="fc"><i>228</i>&nbsp;    }</b>
+<i>229</i>&nbsp;
+<i>230</i>&nbsp;    /**
+<i>231</i>&nbsp;     * Gets the greatest common denominator from the dirVector
+<i>232</i>&nbsp;     * @return
+<i>233</i>&nbsp;     */
+<i>234</i>&nbsp;    private int gcd() {
+<b class="fc"><i>235</i>&nbsp;        return this.gcd(this.dirVector[0], this.dirVector[1]);</b>
+<i>236</i>&nbsp;    }
+<i>237</i>&nbsp;
+<i>238</i>&nbsp;    /**
+<i>239</i>&nbsp;     * Gets the greatest common denominator given the input
+<i>240</i>&nbsp;     * @param first - first int
+<i>241</i>&nbsp;     * @param second - second int
+<i>242</i>&nbsp;     * @return the greatest common denominator
+<i>243</i>&nbsp;     */
+<i>244</i>&nbsp;    private int gcd(int first, int second) {
+<b class="fc"><i>245</i>&nbsp;        first = Math.abs(first);</b>
+<b class="fc"><i>246</i>&nbsp;        second = Math.abs(second);</b>
+<b class="fc"><i>247</i>&nbsp;        while(second!= 0) {</b>
+<b class="fc"><i>248</i>&nbsp;            int temp = second;</b>
+<b class="fc"><i>249</i>&nbsp;            second = first % second;</b>
+<b class="fc"><i>250</i>&nbsp;            first = temp;</b>
+<b class="fc"><i>251</i>&nbsp;        }</b>
+<b class="fc"><i>252</i>&nbsp;        return first;</b>
+<i>253</i>&nbsp;    }
+<i>254</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2017-02-13 16:39</div>
+</div>
+</body>
+</html>

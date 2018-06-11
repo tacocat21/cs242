@@ -1,0 +1,100 @@
+package Util;
+
+/**
+ * A Position object to keep track of the position of a single Piece object
+ * @author Taccio Yamamoto <tyamamo2@illinois.edu>
+ */
+public class Position {
+    /*
+     * @variable position keeps track of the position
+     * @variable limit upper bound of the position array
+     */
+    private int[] position;
+    private int[] limit;
+
+    /*
+     * Constructor of the Position object.
+     * @param startLimit - an array to set the upper bound of the piece position. The lower bound is 0.
+     * @param startPosition - an array to set the position of the piece
+     */
+    public Position(int [] startLimit, int [] startPosition) throws Exception {
+        if(startLimit.length != startPosition.length) {
+            throw new Exception("Initial limit and position arrays have different lengths");
+        }
+
+        for(int idx = 0; idx<startLimit.length; idx ++) {
+            if(startLimit[idx] <= startPosition[idx]
+                    || startPosition[idx] < 0) {
+                throw new IndexOutOfBoundsException("Initial Position parameters out of bound");
+            }
+        }
+
+        position = new int[startPosition.length];
+        limit = new int[startLimit.length];
+        for(int idx = 0; idx<startLimit.length; idx++) {
+            position[idx] = startPosition[idx];
+            limit[idx] = startLimit[idx];
+        }
+    }
+
+    /*
+     * Sets the new position of the object and checks if new position is within boundary.
+     * @param newPosition - an array to set the new position of the piece
+     */
+    public void setPosition(int[] newPosition) throws Exception {
+        if(newPosition.length != position.length) {
+            throw new Exception("Position input array has different length");
+        }
+
+        for(int idx = 0; idx<limit.length; idx ++) {
+            if(limit[idx] <= newPosition[idx] || newPosition[idx] < 0) {
+                throw new IndexOutOfBoundsException("Initial Position parameters out of bound");
+            }
+        }
+
+        for(int idx = 0; idx<position.length; idx++) {
+            position[idx] = newPosition[idx];
+        }
+    }
+
+    /*
+     * returns the column number
+     */
+    public int getColumn(){
+        return position[0];
+    }
+
+    /*
+     * returns the row number
+     */
+    public int getRow(){
+        return position[1];
+    }
+
+    /*
+     * returns the array representation of the position
+     */
+    public int[] getPosition(){
+        return position;
+    }
+
+    /*
+     * returns the upper bound limit of the board
+     */
+    public int[] getLimit(){
+        return limit;
+    }
+
+    /*
+     * Checks if the otherPosition object has the same position as this object
+     */
+    public boolean equals(Position otherPosition) {
+        int[] otherPositionArray = otherPosition.getPosition();
+        for(int idx =0; idx<position.length; idx++) {
+            if(position[idx] != otherPositionArray[idx]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}

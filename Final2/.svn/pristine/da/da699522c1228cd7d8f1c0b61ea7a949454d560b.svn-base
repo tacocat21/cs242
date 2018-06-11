@@ -1,0 +1,29 @@
+// var createSession = function(courseId, successFunction){
+//     if(navigator.geolocation){
+//         navigator.geolocation.getCurrentPosition(function(position){
+//             post_dict={"location":position.coords};
+//
+//             axios.post("/api/session/" + courseId, post_dict).then(function(result){
+//                 successFunction(result);
+//             }).catch(function (error) {
+//                 alert("Unable to create course");
+//                 console.log(error);
+//             });
+//         });
+//     }else{
+//         console.log("Geolocation unavailable");
+//     }
+// };
+
+// var createPoll = function(courseId, successFunction){
+//
+// };
+
+var getAvailablePolls = function(courseId, successFunction){
+    axios.get("/api/session/" + courseId).then(function(result){
+        console.log(result);
+        successFunction(result['data']);
+    }).catch(function(err){
+        console.log(err);
+    })
+};

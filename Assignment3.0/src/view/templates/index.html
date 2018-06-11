@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Taccio Yamamoto Projects</h1>
+    <h2>Projects:</h2>
+    <ul>
+        {% for project in assignments %}
+            {% if project != 'base_path' %}
+            <li><a href="directory/{{project}}">{{project}}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

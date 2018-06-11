@@ -1,0 +1,16 @@
+from flask import Flask
+app = Flask(__name__)
+import os
+import json
+from src.controller.svn_parser.parse_log import ParseLog
+from src.controller.svn_parser.parse_list import ParseList
+
+@app.route('/list')
+def get_list():
+    parse_list = ParseList(os.getcwd() + '/../controller/data/svn_list.xml')
+    return json.dumps(parse_list.parse())
+
+@app.route('/log')
+def get_log():
+    parse_log = ParseLog(os.getcwd() + '/../controller/data/svn_log.xml')
+    return json.dumps(parse_log.parse())

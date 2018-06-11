@@ -1,0 +1,20 @@
+package UserInterface;
+
+import Util.Position;
+
+import javax.swing.*;
+
+/**
+ * Created by taccio on 2/20/17.
+ */
+public class PositionButton extends JButton{
+    private Position position;
+    public PositionButton(int row, int col, int[] boardLimit) throws Exception {
+        super();
+        this.position = new Position(boardLimit, new int[] {row, col});
+    }
+
+    public Position getPosition() {
+        return this.position;
+    }
+}

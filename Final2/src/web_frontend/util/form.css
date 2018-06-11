@@ -1,0 +1,68 @@
+.form-box {
+    margin-top: 80px;
+    background-color: #24323D;
+    width: 50% !important;
+    color: #EDF0F8;
+    padding-top: 30px;
+    padding-right: 50px!important;
+    padding-left: 50px!important;;
+    padding-bottom: 30px ;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.form-box h1{
+    text-align: center;
+    font-family: 'Questrial';
+    font-size: 50px;
+}
+
+html{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #2A2A2A;
+}
+
+#root{
+    /*background-size: cover;*/
+    background-color: #2A2A2A;
+}
+.submit-button{
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 90%;
+    margin-left:5%;
+    margin-right:5%;
+    background-color:#1AB188 !important;
+    color: #FFFFFF !important;
+    text-align:center;
+    font-size:25px !important;
+}
+
+.toggle-box {
+    margin-bottom: 30px;
+}
+
+#login-toggle-button{
+    background-color:#18A980;
+    color:#A2EFD7;
+}
+
+#create-toggle-button{
+    background-color:#43515A;
+    color:#89989F;
+}
+
+.toggle-button {
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 50%;
+}
+
+.btn {
+    border-radius: 0;
+}

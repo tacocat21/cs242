@@ -1,0 +1,37 @@
+package Piece.Implementation;
+
+import Board.Board;
+import Piece.Piece;
+import Util.Position;
+
+/**
+ * Created by taccio on 2/5/17.
+ */
+public class Pawn extends Piece{
+    public Pawn(Position startPosition, int assignUserId, int assignPieceId) {
+        super(startPosition, assignUserId, assignPieceId);
+    }
+
+    /*
+     * Returns a list of all the position the piece can make
+     * @param enemyPiece - a list of the enemy pieces
+     * @param Board - a 2D Piece array representation of the board
+     */
+    public boolean[][] legalMoves(Piece[] enemyPiece, Board board) {
+        if(this.legalPositions != null) {
+            return this.legalPositions;
+        }
+
+        this.initLegalPositionsArray(board.getNumColumns(), board.getNumColumns(), false);
+        int currentCol = this.position.getColumn();
+        int currentRow = this.position.getRow();
+        try{
+            if(board.getPiece(currentRow, currentCol+1) == null){
+                this.setLegalPositionValue(currentRow, currentCol, true);
+            }
+        } finally {
+            return this.legalPositions;
+        }
+    }
+
+}

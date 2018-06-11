@@ -1,0 +1,64 @@
+{% macro comment_box(parent_id, is_new_subthread, display_none) %}
+    {% if display_none %}
+        <div class="comment_reply_box">
+            <textarea id="inputbox_{{parent_id}}_{{is_new_subthread}}" rows="4" cols="30" placeholder="Enter a new message"></textarea>
+            <input id="inputbutton_{{parent_id}}_{{is_new_subthread}}" onclick="submitComment(this)" type="button" value="Submit!"/>
+        </div>
+    {% else %}
+        <div>
+            <textarea id="inputbox_{{parent_id}}_{{is_new_subthread}}" rows="4" cols="30" placeholder="Enter a new message"></textarea>
+            <input id="inputbutton_{{parent_id}}_{{is_new_subthread}}" onclick="submitComment(this)" type="button" value="Submit!"/>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro show_messages(data) %}
+    {% if data %}
+        <li class="message_item">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <button class="btn btn-default" id="downvote_{{data['id']}}" onclick="downvote(this)"><i class="glyphicon glyphicon-thumbs-down gly-flip-horizontal"></i></button>
+                    {{data['votes'] }}
+                    <button class="btn btn-default" id="upvote_{{data['id']}}" onclick="upvote(this)"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+                </div>
+                <div class="col-md-10">
+                    <p>{{ data['message'] }}</p>
+                </div>
+            </div>
+            <div class="reply_box">
+            <div>
+                <button class="btn btn-default" onclick="showReplyBox(this)">Reply</button>
+
+                {{ comment_box(data['id'], True, True) }}
+            </div>
+            <div>
+            {% if data['subthread'] %}
+                <ul>
+                    {{ show_messages(data['subthread']) }}
+                </ul>
+            {% endif %}
+            </div>
+            </div>
+            </div>
+        </li>
+        {% if data['child_message'] %}
+            {{ show_messages(data['child_message']) }}
+        {% else %}
+
+            {{ comment_box(data['id'], False, False)}}
+        {% endif %}
+    {% else %}
+        {{ comment_box(-1, False, False) }}
+    {% endif %}
+{% endmacro %}
+
+<div id="message_board">
+    <meta id="meta-data" data-name="{{json_data['url']}}">
+<h2>Message board: </h2>
+<ul>
+    {{ show_messages(message_json) }}
+</ul>
+</div>
+
+

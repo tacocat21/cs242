@@ -1,0 +1,196 @@
+package Board;
+
+import Piece.Implementation.King;
+import Util.Position;
+import Piece.Piece;
+
+/**
+ * Created by taccio on 2/5/17.
+ */
+public class Board {
+    private Piece[][] Board;
+    private int[] limit;
+    private int numDimension;
+
+    public Board(Piece[] pieces, int[] limit) throws Exception {
+        this.numDimension = limit.length;
+        this.limit = limit.clone();
+        this.Board = new Piece[this.limit[0]][this.limit[1]];
+        for(int row =0; row<this.limit[0]; row++) {
+            for(int col =0; col<this.limit[1]; col++) {
+                Board[row][col] = null;
+            }
+        }
+        this.setPiece(pieces);
+    }
+
+    /*
+     * Returns true if the piece is out of bounds from the board
+     * @param targetPosition - position object to check out of bounds condition
+     */
+    public boolean isOutOfBound(Position targetPosition) throws Exception{
+        int[] positionArray = targetPosition.getPositionArray();
+        if(targetPosition.getNumDimension() != this.numDimension){
+            throw new Exception("Position object has different number of dimensions");
+        }
+        for(int idx =0; idx<this.numDimension; idx++) {
+            if(positionArray[idx]< 0 || positionArray[idx] >= this.limit[idx]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*
+     * Returns true if the piece is out of bounds from the board
+     * @param targetPosition - position object to check out of bounds condition
+     */
+    public boolean isOutOfBound(int row, int col) throws Exception{
+        if(col < 0 || col >= this.limit[0] || row < 0 || row >= this.limit[1]) {
+                return true;
+            }
+        return false;
+    }
+
+    /*
+     * Returns the piece located at targetPosition
+     * @param targetPosition - location of the desired Piece object
+     */
+    public Piece getPiece(Position targetPosition) throws Exception{
+        if(this.isOutOfBound(targetPosition)){
+            throw new IndexOutOfBoundsException("Position parameter is out of bound");
+        }
+        int[] positionArray = targetPosition.getPositionArray();
+        return Board[positionArray[0]][positionArray[1]];
+    }
+
+    /*
+     * Returns the piece located at col, row
+     * @param row
+     * @param col
+     */
+    public Piece getPiece(int row, int col) throws Exception{
+        if(row < 0 || row >= this.getNumRows() ||
+                col < 0 || col >= this.getNumColumns()){
+            throw new IndexOutOfBoundsException("Position parameter is out of bound");
+        }
+        return Board[col][row];
+    }
+
+
+    /*
+     * Returns true if there is a piece at target location
+     * @param targetPosition
+     */
+    public boolean isEmpty(Position targetPosition) throws Exception {
+        if(this.isOutOfBound(targetPosition)){
+            throw new IndexOutOfBoundsException("Position parameter is out of bound");
+        }
+        int[] positionArray = targetPosition.getPositionArray();
+        return Board[positionArray[0]][positionArray[1]] == null;
+    }
+
+    /*
+     * Sets the targetPiece on the board. Note the Board array only stores references to the object
+     * @param targetPiece - piece to add to the board
+     */
+    public void setPiece(Piece targetPiece) throws Exception {
+        Position targetPosition = targetPiece.getPosition();
+        if(this.isOutOfBound(targetPosition)){
+            throw new IndexOutOfBoundsException("Position parameter is out of bound");
+        }
+        if(!this.isEmpty(targetPosition)) {
+            throw new Exception("A piece already exists at the target location");
+        }
+        int[] positionArray = targetPosition.getPositionArray();
+        Board[positionArray[0]][positionArray[1]] = targetPiece;
+    }
+
+    /*
+     * Sets multiple pieces on the board. Note the Board array only stores references to the objects
+     * @param targetPiece - array of Piece objects to add to the board
+     */
+    public void setPiece(Piece[] targetPiece) throws Exception {
+        for(int idx = 0; idx<targetPiece.length; idx++) {
+            this.setPiece(targetPiece[idx]);
+        }
+    }
+
+    /*
+     * removes current piece on the board at target position and returns it
+     * @param targetPosition
+     */
+    public Piece removePiece(Position targetPosition) throws Exception {
+        if(this.isOutOfBound(targetPosition)){
+            throw new IndexOutOfBoundsException("Position parameter is out of bound");
+        }
+        int[] positionArray = targetPosition.getPositionArray();
+        Piece returnPiece = Board[positionArray[0]][positionArray[1]];
+        Board[positionArray[0]][positionArray[1]] = null;
+        return returnPiece;
+    }
+
+    /*
+     * Returns true if there is an enemy piece that can reach the king's position
+     * @param kingPosition - position to check if it is in check
+     * @param enemyPieces - An array of enemy pieces
+     */
+    public boolean check(King king, Piece[] enemyPieces) throws Exception{
+        for(int idx = 0; idx<enemyPieces.length; idx++) {
+            if(this.isOutOfBound(enemyPieces[idx].getPosition())) {
+                throw new IndexOutOfBoundsException("Piece is not on the board");
+            }
+            if(enemyPieces[idx].isLegalMove(king.getPosition(), this, enemyPieces)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*
+     * Returns true if the king is in check and it cannot move to any adjacent position nor can any
+     * piece protect it
+     * @param king - position of the king piece
+     * @param enemyPieces - An array of the enemy pieces
+     */
+    public boolean checkMate(King king, Piece[] enemyPieces) throws Exception{
+        return false;
+    }
+
+    /*
+     * Returns the board object
+     */
+    public Piece[][] getBoard() {
+        return this.Board;
+    }
+
+    /*
+     * Returns the number of columns on the board
+     */
+    public int getNumColumns() {
+        return this.limit[0];
+    }
+
+
+    /*
+     * Returns the number of rows on the board
+     */
+    public int getNumRows() {
+        return this.limit[1];
+    }
+
+    /*
+     * Returns the limit array
+     */
+    public int[] getLimit() {
+        return this.limit;
+    }
+
+    /*
+     * Returns the number of dimensions on the board
+     */
+    public int getNumDimension(){
+        return this.numDimension;
+    }
+
+}

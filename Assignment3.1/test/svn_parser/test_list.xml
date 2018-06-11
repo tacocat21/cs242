@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+<list
+path="https://subversion.ews.illinois.edu/svn/sp17-cs242/tyamamo2">
+<entry
+   kind="dir">
+<name>Assignment1.0</name>
+<commit
+   revision="5382">
+<author>tyamamo2</author>
+<date>2017-02-21T19:24:04.747487Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/.cache</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/.cache/v</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/.cache/v/cache</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.cache/v/cache/lastfailed</name>
+<size>522</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/.idea</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/Assignment2.0.iml</name>
+<size>510</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/.idea/dictionaries</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/dictionaries/taccio.xml</name>
+<size>147</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/misc.xml</name>
+<size>808</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/modules.xml</name>
+<size>278</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/vcs.xml</name>
+<size>180</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/.idea/workspace.xml</name>
+<size>69272</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/CS242Assignment2.1ManualTestingPlan.pdf</name>
+<size>68762</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/CrawlerLog.txt</name>
+<size>44538</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/__pycache__</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/crawler</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/crawler/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/crawler/wikipedia_crawler_data_processor.py</name>
+<size>6318</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/crawler/wikipedia_movie_crawler.py</name>
+<size>17769</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/data</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data/data.json</name>
+<size>443856</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/data_api</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/__init__.py</name>
+<size>0</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/actor_hub.txt</name>
+<size>5160</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/api.py</name>
+<size>6620</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/data_analysis.py</name>
+<size>5289</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/data_handler.py</name>
+<size>5482</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/degree_separation.txt</name>
+<size>17178</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/load_graph.py</name>
+<size>3264</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/visualization.py</name>
+<size>3046</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/data_api/wealth_distribution.png</name>
+<size>14659</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/util</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/util/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/src/util/graph</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/util/graph/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/util/graph/edge_state.py</name>
+<size>2269</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/util/graph/node.py</name>
+<size>3745</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/src/util/graph/undirectedgraph.py</name>
+<size>5496</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/test</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/CrawlerData.txt</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/CrawlerLog.txt</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/test/crawler</name>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/crawler/CrawlerData.txt</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/crawler/CrawlerLog.txt</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/crawler/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/crawler/test_wikipediaCrawlerDataProcessor.py</name>
+<size>4211</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/crawler/test_wikipediaMovieCrawler.py</name>
+<size>7177</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/test/data_api</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/data_api/__init__.py</name>
+<size>0</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/data_api/test_api.py</name>
+<size>11162</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/data_api/test_data.json</name>
+<size>11589</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/test/util</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/util/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment2.0/test/util/graph</name>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/util/graph/__init__.py</name>
+<size>0</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/util/graph/test_edgeState.py</name>
+<size>1184</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/util/graph/test_node.py</name>
+<size>3061</size>
+<commit
+   revision="5967">
+<author>tyamamo2</author>
+<date>2017-02-28T19:28:00.653785Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test/util/graph/test_undirectedGraph.py</name>
+<size>4546</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment2.0/test_data.json</name>
+<size>7260</size>
+<commit
+   revision="6587">
+<author>tyamamo2</author>
+<date>2017-03-07T18:56:45.025712Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>Assignment3.0</name>
+<commit
+   revision="7005">
+<author>tyamamo2</author>
+<date>2017-03-12T21:13:40.946460Z</date>
+</commit>
+</entry>
+    </list>
+</lists>

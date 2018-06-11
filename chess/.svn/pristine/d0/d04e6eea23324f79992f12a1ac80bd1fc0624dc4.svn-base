@@ -1,0 +1,150 @@
+package Piece;
+
+import Util.Position;
+import Board.Board;
+
+/**
+ * The Piece abstract class holds the basic framework to create other pieces.
+ */
+public abstract class Piece
+{
+    protected Position position;
+    protected int userId;
+    protected int pieceId;
+    protected boolean[][] legalPositions = null;
+    /*
+     * Piece constructor to initialize the position, userId, and assignPieceId of the piece
+     * @Param startPosition - initial Piece's position
+     * @Param assignedUserId - id of the owner of the piece
+     * @Param assignPieceId - id of the specific piece
+     */
+    public Piece(Position startPosition, int assignUserId, int assignPieceId){
+        position = new Position(startPosition);
+        userId = assignUserId;
+        pieceId = assignPieceId;
+    }
+
+    /*
+     * Returns a list of all the position the piece can make
+     * @param enemyPiece - a list of the enemy pieces
+     * @param Board - a 2D Piece array representation of the board
+     */
+    abstract public boolean[][] legalMoves(Piece[] enemyPiece, Board board);
+
+    /*
+     * Returns true if it is legal for the piece to move at target position
+     * @param targetPosition
+     * @param Board - a 2D Piece array representation of the board
+     * @param enemyPieces - a list of enemy pieces
+     */
+    public boolean isLegalMove(Position targetPosition, Board board, Piece[] enemyPiece) {
+        this.legalMoves(enemyPiece, board);
+        return this.getLegalPosition(targetPosition);
+    }
+
+    /*
+     * Returns a Piece if the newPosition contains a Piece. Otherwise returns null.
+     * @Param newPosition - tentative position to set piece
+     * @param Board - a 2D Piece array representation of the board
+     */
+    public Piece move(Position newPosition, Board board){
+        Piece targetLocationPiece = null;
+        try{
+            this.position.setPosition(newPosition);
+            targetLocationPiece = board.getPiece(newPosition);
+            board.setPiece(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return targetLocationPiece;
+    }
+
+    /*
+     * returns userId that keeps track of the owner of the piece
+     */
+    public int getUserId() {
+        return userId;
+    }
+
+    /*
+     * returns pieceId to keep track of each unique piece
+     */
+    public int getPieceId() {
+        return pieceId;
+    }
+
+    /*
+     * returns the position Array of the piece
+     */
+    public int[] getPositionArray() {
+        return this.position.getPositionArray();
+    }
+
+    /*
+     * returns the position object of the piece
+     */
+    public Position getPosition() {
+        return this.position;
+    }
+
+    /*
+     * resets the legal positions
+     */
+    public void nextTurn() {
+        this.legalPositions = null;
+    }
+
+    /*
+     * Helper method to set value of boolean array. Returns true if the value was set correctly
+     */
+    protected boolean setLegalPositionValue(int row, int col, boolean value) {
+        if(this.legalPositions == null) {
+            return false;
+        }
+        if(row < 0 || row >=this.legalPositions.length || col < 0 || col >= this.legalPositions[0].length) {
+            return false;
+        }
+        this.legalPositions[col][row] = value;
+        return true;
+    }
+
+    /*
+     * Helper method to get the value of the boolean array.
+     */
+    protected boolean getLegalPosition(int row, int col) {
+        if(row < 0 || row >=this.legalPositions.length || col < 0 || col >= this.legalPositions[0].length) {
+            return false;
+        }
+        if(this.legalPositions == null) {
+            return false;
+        }
+        return this.legalPositions[col][row];
+    }
+
+    /*
+     * Helper method to get the value of the boolean array.
+     */
+    protected boolean getLegalPosition(Position targetPosition) {
+        int row = targetPosition.getRow();
+        int col = targetPosition.getColumn();
+        if(row < 0 || row >=this.legalPositions.length || col < 0 || col >= this.legalPositions[0].length) {
+            return false;
+        }
+        if(this.legalPositions == null) {
+            return false;
+        }
+        return this.legalPositions[col][row];
+    }
+
+    /*
+     * Helper method to initialize the boolean array.
+     */
+    protected void initLegalPositionsArray(int numRow, int numCol, boolean value) {
+        this.legalPositions = new boolean[numCol][numRow];
+        for(int col = 0; col < this.legalPositions.length; col++) {
+            for(int row=0; row< this.legalPositions[0].length; row++) {
+                this.legalPositions[col][row] = value;
+            }
+        }
+    }
+}

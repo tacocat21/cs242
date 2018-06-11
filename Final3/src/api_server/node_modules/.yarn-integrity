@@ -1,0 +1,13 @@
+{
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatters": [
+    "react-button@^1.2.1"
+  ],
+  "lockfileEntries": {
+    "object-assign@^2.0.0": "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa",
+    "react-button@^1.2.1": "https://registry.yarnpkg.com/react-button/-/react-button-1.2.1.tgz#c431d15b3b85e450caed69b006587de83b699682",
+    "react-style-normalizer@^1.1.5": "https://registry.yarnpkg.com/react-style-normalizer/-/react-style-normalizer-1.2.8.tgz#7e84b3d25cea6225545c5af68963b225885344a2"
+  },
+  "files": []
+}

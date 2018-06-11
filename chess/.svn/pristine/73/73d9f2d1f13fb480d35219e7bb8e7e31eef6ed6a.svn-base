@@ -1,0 +1,14 @@
+package Piece;
+
+import Util.Position;
+
+/**
+ * Created by taccio on 2/5/17.
+ */
+public abstract class Piece
+{
+    private Position position;
+    private int userId;
+    private int pieceId;
+
+}

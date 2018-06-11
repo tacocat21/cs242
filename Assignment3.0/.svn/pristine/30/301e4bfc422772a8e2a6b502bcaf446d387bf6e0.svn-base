@@ -1,0 +1,15 @@
+
+<h2>Message board: </h2>
+<ul>
+{% for message in message_json['message']%}
+    <li> {{message}}</li>
+{% endfor %}
+</ul>
+<div>
+    <!--<form id="form1">-->
+          <!--<input name="data" type="text">-->
+        <!--<input type="submit" onclick="submitComment()" name="send" id="send-button" style="display: none">-->
+    <!--</form>-->
+    <textarea id="inputbox" rows="4" cols="50" placeholder="Enter a new message"></textarea>
+    <input id="inputbutton" onclick="submitComment()" type="button"/>
+</div>

@@ -1,0 +1,34 @@
+package Util;
+
+/**
+ * Created by taccio on 2/20/17.
+ */
+public class Score {
+    private int user0Score;
+    private int user1Score;
+
+    public Score() {
+        user0Score = 0;
+        user1Score = 0;
+    }
+
+    public void user0Win() {
+        user0Score++;
+    }
+
+    public void user1Win() {
+        user1Score++;
+    }
+
+    public int getUser0Score() {
+        return user0Score;
+    }
+
+    public int getUser1Score() {
+        return user1Score;
+    }
+
+    public String getScoreString(){
+        return "" + user0Score + " - " + user1Score;
+    }
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 id="title">{{json_data['url']}}</h1>
+    {% if json_data['summary'] %}
+        <h2>Summary:</h2>
+        <p>{{json_data['summary']}}</p>
+        <h2>Date: {{json_data['revision'][0]['date']}}</h2>
+    {% endif %}
+    <div class="row">
+        <div id="subdirectories" class="col-md-6">
+    <h2>Subdirectories: </h2>
+    <ul>
+    {% for sub_dir in json_data['subdir'] %}
+        <li><a href="/directory/{{json_data['subdir'][sub_dir]['url']}}">{{sub_dir}}</a></li>
+    {% else %}
+        <li>No subdirectories found</li>
+    {% endfor %}
+    </ul>
+    </div>
+    <div id="files" class="col-md-6">
+    <h2>Files: </h2>
+    <ul>
+    {% for file in json_data['files'] %}
+        <li><a href="/file/{{json_data['files'][file]['url']}}">{{file}}</a></li>
+    {% else %}
+        <li>No files found</li>
+    {% endfor %}
+    </ul>
+</div>
+    </div>
+    {% include "commit_history.html" %}
+    {% include "comment.html" %}
+{% endblock %}

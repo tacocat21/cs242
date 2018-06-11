@@ -1,0 +1,218 @@
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comments.db'
+db = SQLAlchemy(app)
+
+
+class Message(db.Model):
+
+    id = db.Column(db.Integer, db.Sequence('user_id_seq'), primary_key=True)
+    message_id = db.Column(db.Integer)
+    url = db.Column(db.String(200))  # url of the comment board
+    comment = db.Column(db.String(200))  # comment of the column
+    parent = db.Column(db.Integer)  # parent message id in the comment thread. -1 if no parents
+    child = db.Column(db.Integer)  # child message in the comment. -1 if no children
+    subthread_child = db.Column(db.Integer)  # child subthread message. -1 if no subthread
+    def __init__(self, url, comment, parent):
+        """
+            Message schema to store information about the message. The database is stored in a Nested set model
+            with the child column indicating the next message and the subthread_child column indicating the next
+            message for the sub-thread
+
+        :param url: url of the message board
+        :param comment: string of the message
+        :param parent: parent message index
+
+        """
+        self.message_id = increment_message_id(url)
+        self.url=url
+        self.comment=comment
+        self.parent=parent
+        self.child=-1
+        self.subthread_child=-1
+
+    def __repr__(self):
+        """
+
+        :return: string representation of the message row
+        """
+        return '(messageID: ' + str(self.message_id) + \
+               ', url: ' + self.url + \
+               ', comment: ' + self.comment + \
+               ', parent: ' + self.parent + \
+               ', child: ' + self.child + \
+               ', subthread_child: ' + self.subthread_child + ')'
+
+class Message_count(db.Model):
+
+
+    id = db.Column(db.Integer, db.Sequence('user_id_seq'), primary_key=True)
+    url = db.Column(db.String(200))
+    num_comments = db.Column(db.Integer)
+
+    def __init__(self, url, num_comments=0):
+        """
+
+        :param url: url of the message board
+        :param num_comments: number of comments on the board. Used to keep track of index f
+        """
+        self.url = url
+        self.num_comments = num_comments
+
+    def __repr__(self):
+        return '<url: ' + self.url + ', num_comments: ' + str(self.num_comments) + '>'
+
+def increment_message_id(url):
+    try:
+        message_count_row = Message_count.query.filter_by(url=url).first()
+    except:
+        message_count_row = None
+    # url not found
+    if message_count_row is None:
+        new_message_count = Message_count(url=url, num_comments=0)
+        db.session.add(new_message_count)
+        db.session.commit()
+        return 0
+    else:
+        message_count_row.num_comments+=1
+        db.session.commit()
+        return message_count_row.num_comments
+
+class Comment:
+    def __init__(self):
+        db.create_all()
+        self.filter_words = set(['fuck', 'asshole', 'cunt', 'whore', 'bitch', 'niggas'])
+
+    def clean_db(self):
+        db.drop_all()
+
+    def post_message(self, url, comment_message, parent_message_id, is_subthread=False):
+        filtered_message=self.filter(comment_message)
+        try:
+            url_messages = Message.query.filter_by(url=url).order_by(Message.message_id).all()
+        except:
+            new_message = Message(url=url, comment=filtered_message, parent=-1)
+            db.session.add(new_message)
+            db.session.commit()
+            return new_message
+        if len(url_messages)==0:
+            new_message = Message(url=url, comment=filtered_message, parent=-1)
+            db.session.add(new_message)
+            db.session.commit()
+            return new_message
+        parent_message = url_messages[parent_message_id]
+        if is_subthread:
+            parent_id = self.get_last_subthread_child_id(parent_message.message_id, url_messages)
+            # invalid parent id
+            if parent_id < 0:
+                return
+            new_message = Message(url=url, comment=filtered_message, parent=parent_id)
+            new_parent_message = url_messages[parent_id]
+            # the parent node does not have any subthread children
+            if parent_id == parent_message.message_id:
+                new_parent_message.subthread_child = new_message.message_id
+            else:
+                new_parent_message.child = new_message.message_id
+        else:
+            parent_id = self.get_last_child_id(parent_message_id, url_messages)
+            new_message = Message(url=url, comment=filtered_message, parent=parent_id)
+            new_parent_message = url_messages[parent_id]
+            new_parent_message.child = new_message.message_id
+        db.session.add(new_message)
+        db.session.commit()
+        return new_message
+
+
+    def get_last_subthread_child_id(self, parent_message_id, url_messages):
+        if parent_message_id < 0:
+            return parent_message_id
+        parent_message = url_messages[parent_message_id]
+        if parent_message.subthread_child == -1:
+            return parent_message.message_id
+        subthread_child_id = parent_message.subthread_child
+        return self.get_last_child_id(subthread_child_id, url_messages)
+
+    def get_last_child_id(self, parent_message_id, url_messages):
+        # url_messages is a list
+        if parent_message_id < 0:
+            return -1
+        else:
+            parent_message = url_messages[parent_message_id]
+            if parent_message.child == -1:
+                return parent_message.message_id
+            return self.get_last_child_id(parent_message.child, url_messages)
+
+
+    def get_message(self, url):
+        """
+        
+        :param url: url of the message board
+        :return: json representation of the message
+        """
+        # try:
+        #     message_list = Message.query.filter_by(url=url).order_by(Message.message_id).all()
+        # except:
+        #     return {}
+        # result = {'message':[]}
+        # for message in message_list:
+        #     result.append[message.comment]
+        # return result
+        try:
+            message_list = Message.query.filter_by(url=url).order_by(Message.message_id).all()
+        except:
+            return {}
+        head = {}
+        mapping = {}
+        for message in message_list:
+            id = message.message_id
+            mapping[id] = {'message':message.comment,
+                           'id':id,
+                           'subthread':None,
+                           'child_message':None
+                           }
+            parent_message_id = message.parent
+            parent_message_obj = message_list[parent_message_id]
+            if parent_message_id == -1:
+                head = mapping[id]
+            elif parent_message_obj.child == id:
+                parent_map_obj = mapping[parent_message_id]
+                parent_map_obj['child_message'] = mapping[id]
+            elif parent_message_obj.subthread_child == id:
+                parent_map_obj = mapping[parent_message_id]
+                parent_map_obj['subthread'] = mapping[id]
+
+        return head
+
+
+    def filter(self, message):
+        """
+        
+        :param message: message to filter 
+        :return: Filters naughty words and replaces it with ****
+        """
+        word_list = message.split(' ')
+        result = []
+        for word in word_list:
+            if word.lower() in self.filter_words:
+                result.append(('*'*len(word)))
+            else:
+                result.append(word)
+        return ' '.join(result)
+
+
+if __name__ == "__main__":
+    comment = Comment()
+    increment_message_id('a')
+    increment_message_id('a')
+    increment_message_id('a')
+    # comment.increment_message_id('a')
+    # s = select([comment.message_count])
+    # result = comment.session.query(comment.message_count).alll()
+    result = Message_count.query.all()
+    for row in result:
+        print(row)
+    # result.close()
+
+

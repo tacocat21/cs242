@@ -1,0 +1,17 @@
+<h2>Commit history:</h2>
+<table>
+    <tr>
+        <th>Revision Number</th>
+        <th>Author</th>
+        <th>Commit message</th>
+        <th>Date</th>
+    </tr>
+    {% for commit_history in json_data['revision']%}
+    <tr>
+        <th>{{commit_history['revision_id']}}</th>
+        <th>{{commit_history['author']}}</th>
+        <th>{{commit_history['message']}}</th>
+        <th>{{commit_history['date']}}</th>
+    </tr>
+    {% endfor %}
+</table>

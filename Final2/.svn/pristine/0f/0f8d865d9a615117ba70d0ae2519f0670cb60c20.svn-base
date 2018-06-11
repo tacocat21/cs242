@@ -1,0 +1,37 @@
+/*
+ * React component containing message board
+ */
+class MessageBoard extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+
+    setPageState(e) {
+        console.log(e);
+        this.setState(prevState => ({
+            page: e
+        }));
+    }
+
+    render() {
+        let formPage = null;
+        if (this.state.page === "Login") {
+            formPage = <LoginForm/>;
+        } else {
+            formPage = <CreateAccountForm/>;
+        }
+        return (
+            <div className="form-box">
+                <h1>iClicker++</h1>
+                <Toggle onValueChange={this.setPageState}/>
+                {formPage}
+            </div>);
+    }
+}
+
+
+ReactDOM.render(
+    <MessageBoard/>
+    , document.getElementById('root'));
+

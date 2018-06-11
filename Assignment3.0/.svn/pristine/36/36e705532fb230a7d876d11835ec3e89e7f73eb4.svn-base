@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{json_data['url']}}</h1>
+    <h2>Size: {{json_data['size']}}</h2>
+    <h2>File: </h2>
+    <iframe src="https://subversion.ews.illinois.edu/svn/sp17-cs242/tyamamo2/{{json_data['url']}}"></iframe>
+    {% include "commit_history.html" %}
+    {% include "comment.html" %}
+{% endblock %}

@@ -1,0 +1,25 @@
+from src.controller.svn_parser.parse_list import ParseList
+from src.controller.svn_parser.parse_log import ParseLog
+import os
+
+def join_data(svn_log_data, svn_list_data):
+    result = {}
+    for project in svn_list_data:
+        try:
+            project_data = svn_list_data[project]
+            result[project] = {'name':project,
+                               'date':project_data['commit']['date'],
+                               'version':'1.0.0',
+                               }
+        except:
+            continue
+
+    return result
+
+if __name__=="__main__":
+
+    parse_list = ParseList(os.getcwd() + '/../data/svn_list.xml')
+    parse_log = ParseLog(os.getcwd() + '/../data/svn_log.xml')
+    join_result = join_data(parse_log.parse(), parse_list.parse())
+    print(join_result)
+

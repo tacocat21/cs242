@@ -1,0 +1,119 @@
+\hypertarget{classPiece_1_1Implementation_1_1Pawn}{\section{Piece.\-Implementation.\-Pawn Class Reference}
+\label{classPiece_1_1Implementation_1_1Pawn}\index{Piece.\-Implementation.\-Pawn@{Piece.\-Implementation.\-Pawn}}
+}
+Inheritance diagram for Piece.\-Implementation.\-Pawn\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPiece_1_1Implementation_1_1Pawn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPiece_1_1Implementation_1_1Pawn_aa8ed50a38f542bedfbb2b593ec8d28e7}{Pawn} (\hyperlink{classUtil_1_1Position}{Position} start\-Position, int assign\-User\-Id, int assign\-Piece\-Id)  throws Exception 
+\item 
+boolean \hyperlink{classPiece_1_1Implementation_1_1Pawn_a81011c0564bcf4d1931eb0e11eb7d7e8}{move} (\hyperlink{classUtil_1_1Position}{Position} new\-Position, \hyperlink{classBoard_1_1Board}{Board} board)  throws Exception 
+\item 
+boolean \hyperlink{classPiece_1_1Implementation_1_1Pawn_aaf6b3635a8fa5c0243223dbc065c4ad3}{can\-Move} (\hyperlink{classUtil_1_1Position}{Position} new\-Position, \hyperlink{classBoard_1_1Board}{Board} board)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPiece_1_1Implementation_1_1Pawn_abe53393d31e868047a99adc17ffe50f6}{init\-Directions} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class that defines the \hyperlink{classPiece_1_1Implementation_1_1Pawn}{Pawn} chess piece \begin{DoxyAuthor}{Author}
+Taccio Yamamoto 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPiece_1_1Implementation_1_1Pawn_aa8ed50a38f542bedfbb2b593ec8d28e7}{\index{Piece\-::\-Implementation\-::\-Pawn@{Piece\-::\-Implementation\-::\-Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Piece::Implementation::Pawn@{Piece\-::\-Implementation\-::\-Pawn}}
+\subsubsection[{Pawn}]{\setlength{\rightskip}{0pt plus 5cm}Piece.\-Implementation.\-Pawn.\-Pawn (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{start\-Position, }
+\item[{int}]{assign\-User\-Id, }
+\item[{int}]{assign\-Piece\-Id}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classPiece_1_1Implementation_1_1Pawn_aa8ed50a38f542bedfbb2b593ec8d28e7}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em start\-Position} & -\/ start position of the piece \\
+\hline
+{\em assign\-User\-Id} & -\/ user identification of the owner of the piece \\
+\hline
+{\em assign\-Piece\-Id} & -\/ unique id assigned to the piece \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws possible exceptions from the init\-Directions function \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPiece_1_1Implementation_1_1Pawn_aaf6b3635a8fa5c0243223dbc065c4ad3}{\index{Piece\-::\-Implementation\-::\-Pawn@{Piece\-::\-Implementation\-::\-Pawn}!can\-Move@{can\-Move}}
+\index{can\-Move@{can\-Move}!Piece::Implementation::Pawn@{Piece\-::\-Implementation\-::\-Pawn}}
+\subsubsection[{can\-Move}]{\setlength{\rightskip}{0pt plus 5cm}boolean Piece.\-Implementation.\-Pawn.\-can\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{new\-Position, }
+\item[{{\bf Board}}]{board}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classPiece_1_1Implementation_1_1Pawn_aaf6b3635a8fa5c0243223dbc065c4ad3}
+Checks if the piece can move to the new\-Position. This function overrides the can\-Move \hyperlink{classPiece_1_1Piece}{Piece} function 
+\begin{DoxyParams}{Parameters}
+{\em new\-Position} & -\/ tentative position to set piece \\
+\hline
+{\em board} & -\/ board that keeps track of all the pieces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the piece can move to the new\-Position 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws possible exception from the board.\-get\-Piece() function \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classPiece_1_1Implementation_1_1Pawn_abe53393d31e868047a99adc17ffe50f6}{\index{Piece\-::\-Implementation\-::\-Pawn@{Piece\-::\-Implementation\-::\-Pawn}!init\-Directions@{init\-Directions}}
+\index{init\-Directions@{init\-Directions}!Piece::Implementation::Pawn@{Piece\-::\-Implementation\-::\-Pawn}}
+\subsubsection[{init\-Directions}]{\setlength{\rightskip}{0pt plus 5cm}void Piece.\-Implementation.\-Pawn.\-init\-Directions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classPiece_1_1Implementation_1_1Pawn_abe53393d31e868047a99adc17ffe50f6}
+Initializes the legal directions of the piece 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & throws exceptions from the Direction constructor \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classPiece_1_1Piece_af8bf9c4edb5bd73c91f3f8b21793ca5b}{Piece.\-Piece}.
+
+\hypertarget{classPiece_1_1Implementation_1_1Pawn_a81011c0564bcf4d1931eb0e11eb7d7e8}{\index{Piece\-::\-Implementation\-::\-Pawn@{Piece\-::\-Implementation\-::\-Pawn}!move@{move}}
+\index{move@{move}!Piece::Implementation::Pawn@{Piece\-::\-Implementation\-::\-Pawn}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}boolean Piece.\-Implementation.\-Pawn.\-move (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{new\-Position, }
+\item[{{\bf Board}}]{board}
+\end{DoxyParamCaption}
+)  throws Exception \hspace{0.3cm}{\ttfamily [inline]}}}\label{classPiece_1_1Implementation_1_1Pawn_a81011c0564bcf4d1931eb0e11eb7d7e8}
+Overrides the move function to move a piece object to the new\-Position.  new\-Position -\/ tentative position to set piece  board -\/ board that keeps track of all the pieces \begin{DoxyReturn}{Returns}
+true if the piece was successfully able to be moved 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & from the helper functions that checks different possible positions \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\-Piece/\-Implementation/Pawn.\-java\end{DoxyCompactItemize}

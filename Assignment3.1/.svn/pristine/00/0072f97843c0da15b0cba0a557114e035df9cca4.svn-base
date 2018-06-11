@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<logentry
+   revision="0">
+<author>empty</author>
+<date>2017-03-12T21:13:40.946460Z</date>
+<paths></paths>
+<msg></msg>
+</logentry>
+<logentry
+   revision="169">
+<author>root</author>
+<date>2017-01-24T19:28:06.057555Z</date>
+<paths>
+<path
+   kind="dir"
+   action="A">/tyamamo2</path>
+</paths>
+<msg>created directory tyamamo2</msg>
+</logentry>
+
+<logentry
+   revision="1081">
+<author>author3</author>
+<date>2017-01-27T19:07:37.487210Z</date>
+<paths>
+<path
+   kind="dir"
+   action="A">/tyamamo2/grocery</path>
+<path
+   action="A"
+   kind="file">/tyamamo2/grocery/list1.txt</path>
+<path
+   kind="file"
+   action="M">/tyamamo2/grocery/list2.txt</path>
+</paths>
+<msg>importing grocery project</msg>
+</logentry>
+    </log>

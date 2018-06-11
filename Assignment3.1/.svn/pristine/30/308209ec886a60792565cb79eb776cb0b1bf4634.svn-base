@@ -1,0 +1,39 @@
+
+var submitComment = function(elem) {
+    console.log(elem)
+    var id = $(elem).attr("id");
+    var idNumber = id.split("_")[1];
+    var isNewSubthread = id.split("_")[2];
+    console.log(id);
+    console.log(idNumber);
+    var urlStr = $("#meta-data").attr("data-name");
+    console.log(urlStr);
+    console.log(isNewSubthread);
+
+    $.ajax({url:"/comment/" + urlStr,
+            method:"POST",
+            data:{
+                'comment': document.getElementById("inputbox_"+idNumber+"_"+isNewSubthread).value,
+                'new_subthread': isNewSubthread,
+                'parent_message_id': idNumber
+            },
+            success:function (result) {
+                console.log(result);
+                $('#message_board').replaceWith(result);
+                console.log('received result');
+            },
+            error: function (err){
+                console.log(err);
+            }
+    });
+};
+
+
+$(document).ready(function(){
+    console.log("page ready");
+    $("#subdirectories").css("display", "show");
+    $("#subdirectories").fadeIn(2000);
+    $("#files").css("display", "show");
+    $("#files").fadeIn(2000);
+    $("#title").animate({fontSize:"50px"}, 2000);
+});

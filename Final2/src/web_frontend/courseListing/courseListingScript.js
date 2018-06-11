@@ -1,0 +1,144 @@
+/*
+ *  React component to create a row for the ListCourseTable
+ */
+class ListCourseRow extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            iconClass:"glyphicon glyphicon-plus"
+        };
+        console.log(props);
+        this.joinCourse = this.joinCourse.bind(this);
+        this.redirectPage = this.redirectPage.bind(this);
+    }
+
+    // When called, will call function to add student to course and change the css
+    joinCourse(e){
+        e.preventDefault();
+        console.log("joined course");
+        this.setState(prevState => ({
+            iconClass: "glyphicon glyphicon-ok"
+        }));
+        if (sessionStorage.getItem("userType") !== STUDENTTYPE) {
+            alert("You are not a student!");
+            return false;
+        }
+        var studentId = sessionStorage.getItem("userID");
+        var courseId = this.props.course._id;
+        addCourseToStudent(studentId, courseId, function(result){
+            console.log("Successfully added course!");
+        });
+    }
+
+    redirectPage(){
+        if(sessionStorage.getItem("userType")===TEACHERTYPE){
+            window.location = "http://localhost:5000/course/view/" + this.props.courseId;
+        }
+    }
+
+    render(){
+
+        if(sessionStorage.getItem("userType") === STUDENTTYPE){
+            return (<tr onClick={this.redirectPage}>
+                <th scope="row">{this.props.course.course_code}</th>
+                <td>{this.props.course.course_name}</td>
+                <td>{this.props.course.teacher_name}</td>
+                <td>
+                    <p className="center-text"><i className={this.state.iconClass} onClick={this.joinCourse}></i></p>
+                </td>
+            </tr>);
+        }
+
+        return (
+            <tr onClick={this.redirectPage}>
+                <th scope="row">{this.props.course.course_code}</th>
+                <td>{this.props.course.course_name}</td>
+                <td>{this.props.course.teacher_name}</td>
+            </tr>);
+    }
+}
+
+/*
+ *  React component to list all the available courses
+ */
+class ListCourseTable extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            courseList: []
+        };
+        this.updateCourseList = this.updateCourseList.bind(this);
+        this.redirectToCreate = this.redirectToCreate.bind(this);
+        this.redirectToIntro = this.redirectToIntro.bind(this);
+    }
+
+    updateCourseList(result){
+        this.setState(prevState => ({
+            courseList: result
+        }));
+    }
+
+    componentWillMount(){
+        getCourseList(undefined, this.updateCourseList);
+    }
+
+    redirectToIntro(){
+        window.location = "http://localhost:5000/intro";
+    }
+
+    redirectToCreate(){
+        window.location = "http://localhost:5000/course/create";
+    }
+
+    render(){
+        let button = null;
+        let studentOption = null;
+        if(sessionStorage.getItem("userType") === TEACHERTYPE){
+            button = (<div className="row">
+                          <a onClick={this.redirectToIntro} className="col-sm-6"><button className="btn btn-default dual-button">Home</button></a>
+                          <a onClick={this.redirectToCreate} className="col-sm-6"><button className="btn btn-default dual-button">Create Course</button></a>
+                      </div>);
+        }
+        if(sessionStorage.getItem("userType") === STUDENTTYPE){
+            button = (<div className="row">
+                          <a><a onClick={this.redirectToIntro} className="col-sm-12"><button className="btn btn-default single-button">Home</button></a></a>
+                      </div>);
+            studentOption = <th>Add course</th>
+        }
+        if(this.state.courseList.length === 0){
+            console.log(this.state.courseList);
+            return(<div className="base-box">
+                    <h1>Course Listing</h1>
+                    {button}
+                    <p className="center-text paragraph-margin">No courses available! Too underfunded</p>
+                   </div>);
+        }
+        let rows = [];
+        this.state.courseList.forEach((courseObj) =>{
+            rows.push(<ListCourseRow key={courseObj._id} course={courseObj}
+                                     courseId={courseObj._id}/>);
+        });
+        return(<div className="base-box">
+            <h1>Course Listing</h1>
+            {button}
+            <table className="table table-hover">
+                <thead>
+                    <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Instructor</th>
+                        {studentOption}
+                    </tr>
+                </thead>
+            <tbody>
+                {rows}
+            </tbody>
+
+            </table>
+        </div>);
+    }
+}
+
+ReactDOM.render(
+    <ListCourseTable/>
+    , document.getElementById('root'));

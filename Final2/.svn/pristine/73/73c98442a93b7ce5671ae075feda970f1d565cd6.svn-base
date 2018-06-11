@@ -1,0 +1,3 @@
+var baseAPIUrl = "http://localhost:5000/";
+var STUDENTTYPE = "STUDENT";
+var TEACHERTYPE = "TEACHER";

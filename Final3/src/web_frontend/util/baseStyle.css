@@ -1,0 +1,122 @@
+.question{
+    text-align: left !important;
+    font-size: 18px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.big-question{
+    text-align: left !important;
+}
+.correct {
+    background: #59f441 !important;
+}
+
+.wrong {
+    background: #f45f42 !important;
+}
+
+.base-box{
+    margin-top: 80px;
+    background-color: #24323D;
+    width: 90% !important;
+    color: #EDF0F8;
+    padding-top: 30px;
+    padding-right: 50px!important;
+    padding-left: 50px!important;;
+    padding-bottom: 30px ;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.base-box h1{
+    text-align: center;
+    font-family: 'Questrial';
+    font-size: 50px;
+}
+
+html{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #2A2A2A;
+}
+
+#root{
+    /*background-size: cover;*/
+    background-color: #2A2A2A;
+}
+
+/*
+ * use it for when there are no buttons next to each other
+ */
+.single-button{
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%;
+    background-color:#1AB188 !important;
+    color: #FFFFFF !important;
+    text-align:center;
+    font-size:25px !important;
+}
+
+.dual-button{
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 90%;
+    margin-left:5%;
+    background-color:#1AB188 !important;
+    color: #FFFFFF !important;
+    text-align:center;
+    font-size:25px !important;
+}
+
+.toggle-button{
+    width:50%;
+}
+
+.button-green{
+    background-color:#1AB188 !important;
+    color: #FFFFFF !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.button-orange{
+    background-color:#ed952a !important;
+    color: #FFFFFF !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.button-red{
+    background-color:#c94444 !important;
+    color: #FFFFFF !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+
+.center-text{
+    text-align:center;
+}
+
+.user-image{
+    width:300px;
+    display: block;
+    margin: 7% auto;
+    border-radius: 150px
+}
+
+.paragraph-margin{
+    margin-top:5%;
+}
+
+.sub-box{
+
+}

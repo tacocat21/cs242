@@ -1,0 +1,11 @@
+
+
+
+var getImage = function(imageName, successFunction){
+    axios.get("/api/image/" + imageName).then(function(result){
+        successFunction(result['data']);
+    }).catch(function(err){
+        console.log(err);
+    });
+};
+

@@ -1,0 +1,104 @@
+package Board;
+
+import Piece.Implementation.Pawn;
+import Util.Position;
+import org.junit.Test;
+import Piece.Piece;
+import static org.junit.Assert.*;
+
+/**
+ * Created by taccio on 2/7/17.
+ */
+public class BoardTest {
+    private static Piece[] board1Pieces;
+    private static int[] board1Limit = new int[] {8, 8};
+    private static Board board1;
+    public static void setup() throws Exception{
+        board1Pieces = new Piece[1];
+        board1Pieces[0] = new Pawn(new Position(board1Limit, new int[] {1,0}), 0, 0);
+        board1 = new Board(board1Pieces, board1Limit);
+
+    }
+
+    @Test
+    public void isOutOfBound() throws Exception {
+        setup();
+        assertTrue(board1.isOutOfBound(-1,0));
+        assertTrue(board1.isOutOfBound(8,0));
+        assertTrue(board1.isOutOfBound(0,8));
+        assertFalse(board1.isOutOfBound(4,0));
+
+    }
+
+    @Test
+    public void getPiece() throws Exception {
+        setup();
+        Position pawnPosition = board1Pieces[0].getPosition();
+        assertEquals(board1.getPiece(pawnPosition.getRow(), pawnPosition.getColumn()), board1Pieces[0]);
+        assertEquals(board1.getPiece(board1Pieces[0].getPosition()), board1Pieces[0]);
+    }
+
+
+    @Test
+    public void isEmpty() throws Exception {
+        setup();
+        assertTrue(board1.isEmpty(new Position(board1Limit, new int[] {0,0})));
+    }
+
+    @Test
+    public void setPiece() throws Exception {
+        setup();
+        Pawn testPawn = new Pawn(new Position(board1Limit, new int[] {0,0}), 0, 0);
+        board1.setPiece(testPawn);
+        assertEquals(board1.getPiece(testPawn.getPosition()), testPawn);
+    }
+
+    @Test(expected = Exception.class)
+    public void testSetPieceException() throws Exception{
+        setup();
+        Pawn sameLocationPawn = new Pawn(new Position(board1Limit, new int[] {1,0}), 0, 0);
+        board1.setPiece(sameLocationPawn);
+    }
+
+
+    @Test
+    public void removePiece() throws Exception {
+
+    }
+
+    @Test
+    public void check() throws Exception {
+
+    }
+
+    @Test
+    public void checkMate() throws Exception {
+
+    }
+
+    @Test
+    public void getBoard() throws Exception {
+
+    }
+
+    @Test
+    public void getNumColumns() throws Exception {
+
+    }
+
+    @Test
+    public void getNumRows() throws Exception {
+
+    }
+
+    @Test
+    public void getLimit() throws Exception {
+
+    }
+
+    @Test
+    public void getNumDimension() throws Exception {
+
+    }
+
+}

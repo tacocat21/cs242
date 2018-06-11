@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Taccio Yamamoto's Portfolio</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap/css/bootstrap.css') }}">
+</head>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>var submitComment = function(){
+    console.log('sending comment data');
+    console.log(document.getElementById("inputbox").value);
+    $.post("/comment/{{json_data['url']}}",
+        {'comment': document.getElementById("inputbox").value   , 'new_subthread':false, 'parent_message_id':0}).done(function(){
+        console.log('received result');
+    })
+}</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+package Board.Implementation;
+
+import Board.Board;
+import Piece.Implementation.King;
+import Piece.Piece;
+import Util.Direction;
+import Util.Position;
+
+import java.util.ArrayList;
+
+/**
+ * Created by taccio on 2/19/17.
+ */
+public class ChessBoard extends Board {
+
+    public ChessBoard(Piece[] pieces, int[] limit) throws Exception{
+        super(pieces, limit);
+
+    }
+
+    /**
+     * Checks if the king piece is in check
+     *
+     * @param kingPosition - king's position
+     * @param enemyPieces  - An array list of enemy pieces
+     * @return true if the king is in check
+     */
+    public boolean check(Position kingPosition, ArrayList<Piece> enemyPieces) throws Exception {
+        for (Piece currentPiece : enemyPieces) {
+            Direction targetDirection = currentPiece.getDirection(kingPosition);
+            if (targetDirection != null) {
+                Position currentPosition = new Position(currentPiece.getPosition());
+                try {
+                    if(currentPiece.canMove(kingPosition, this)){
+                        return true;
+                    }
+                    return false;
+                } catch (Exception e) {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Checks if the enemy can cover the targetPosition without being the piece itself
+     * @param targetPosition
+     * @param enemyPieces
+     * @return
+     * @throws Exception
+     */
+    public Piece enemyCover(Position targetPosition, ArrayList<Piece> enemyPieces) throws Exception {
+        Piece targetPiece = this.getPiece(targetPosition);
+        for (Piece currentPiece : enemyPieces) {
+            if(targetPiece != null && targetPiece.equals(currentPiece)){
+                continue;
+            }
+            Direction targetDirection = currentPiece.getDirection(targetPosition);
+            if (targetDirection != null) {
+                Position currentPosition = new Position(currentPiece.getPosition());
+                try {
+                    if(currentPiece.canReach(targetPosition, this)){
+                        return currentPiece;
+                    }
+
+                } catch (Exception e) {
+                    continue;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Checks if the king is in checkmate
+     *
+     * @param king        - king piece
+     * @param enemyPieces - An array list of enemy pieces
+     * @return true if there is a checkmate against the king
+     */
+    public boolean checkMate(King king, ArrayList<Piece> enemyPieces) throws Exception {
+        int[] kingPositionArray = king.getPosition().getPositionArray();
+        // checks if the king is in check
+        System.out.println("testing for checkmate");
+        if(!check(king.getPosition(), enemyPieces)){
+            System.out.println("King is not in check");
+            return false;
+        }
+
+        // checks if the king cannot move to any other position
+        for (int posX = -1; posX <= 1; posX++) {
+            for (int posY = -1; posY <= 1; posY++) {
+                System.out.println("Testing new position");
+                if(posX == 0 && posY ==0){
+                    continue;
+                }
+                int[] checkPositionArr = new int[]{kingPositionArray[0] + posX, kingPositionArray[1] + posY};
+
+                Position checkPosition = null;
+                Piece pieceAtCheckLocation = null;
+                try{
+                    checkPosition = new Position(this.limit, checkPositionArr);
+                    pieceAtCheckLocation = this.getPiece(checkPosition);
+                } catch (Exception e){
+                    continue;
+                }
+                if(pieceAtCheckLocation != null){
+
+                    if(pieceAtCheckLocation.getUserId() == king.getUserId()){
+                        continue;
+                    }
+                    Piece enemyCover = this.enemyCover(checkPosition, enemyPieces);
+                    if(enemyCover == null){
+                        return false;
+                    }
+                    continue;
+                } else {
+                    Piece enemyCover = this.enemyCover(checkPosition, enemyPieces);
+                    if (enemyCover == null) {
+                        return false;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * moves the current piece to the target position.
+     *
+     * @param currentPiece   - piece to move to target position
+     * @param targetPosition - position to move the currentPiece
+     * @return returns the piece at targetPosition. null if no piece is located at target Position
+     */
+    public Piece move(Piece currentPiece, Position targetPosition) throws Exception {
+        Position currentPiecePosition =  new Position(currentPiece.getPosition());
+        if (this.isOutOfBound(targetPosition)) {
+            throw new Exception("Target position is out of bounds");
+        }
+        if (currentPiece.getPosition().isEqual(targetPosition)) {
+            throw new Exception("Target position is the same position");
+        }
+        if (this.getPiece(targetPosition) != null
+                && this.getPiece(targetPosition).getUserId() == currentPiece.getUserId()) {
+            throw new Exception("Target position belongs to the same team");
+        }
+        if (currentPiece.canMove(targetPosition, this)) {
+            Piece targetPiece = this.getPiece(targetPosition);
+//            this.removePiece(currentPiecePosition);
+            if (!currentPiece.move(targetPosition, this)) {
+                throw new Exception("Unable to move piece");
+            }
+            this.removePiece(currentPiecePosition);
+            this.setPiece(currentPiece);
+            return targetPiece;
+        }
+        throw new Exception("Unable to move piece");
+    }
+
+}

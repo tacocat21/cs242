@@ -1,0 +1,28 @@
+p{
+    color:blue;
+}
+
+#content{
+    margin: 30px 150px 100px 150px;
+}
+
+#commit_history{
+    width: 100%;
+}
+
+#subdirectories{
+    display: none;
+}
+
+#files{
+    display: none;
+}
+
+#title{
+    font-size:20px;
+}
+
+iframe{
+    width:100%;
+    height:250px;
+}
